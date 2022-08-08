@@ -6,7 +6,7 @@
         src="https://avatars.githubusercontent.com/u/4426989?s=200&v=4"
     >
 </p>
-<h1>Infrastructure Reference</h1>
+<h1>React Reference</h1>
 
 [Changelog](#) |
 [Contributing](./CONTRIBUTING.md)
@@ -19,7 +19,7 @@
 
 </div>
 
-This repository contains different infrastructure components that are used in different projects
+This repository contains different React components, hooks, apps and libraries that are used in different projects
 here at [NaN Labs](https://www.nanlabs.com/).
 
 - [Applications](#applications)
