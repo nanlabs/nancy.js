@@ -15,7 +15,6 @@
 <div align="center">
 
 [![Shell Check][shellcheckbadge]][shellcheckurl]
-[![Tensorflow Check][tf-checkbadge]][tf-checkurl]
 [![License: MIT][licensebadge]][licenseurl]
 
 </div>
@@ -51,8 +50,6 @@ Contributions are welcome!
 Made with [contributors-img](https://contrib.rocks).
 
 [shellcheckbadge]: https://github.com/nanlabs/nancy-react-toolkit/actions/workflows/shellcheck.yml/badge.svg
-[tf-checkbadge]: https://github.com/nanlabs/nancy-react-toolkit/actions/workflows/tf-check.yml/badge.svg
 [licensebadge]: https://img.shields.io/badge/License-MIT-blue.svg
 [shellcheckurl]: https://github.com/nanlabs/nancy-react-toolkit/actions/workflows/shellcheck.yml
-[tf-checkurl]: https://github.com/nanlabs/nancy-react-toolkit/actions/workflows/tf-check.yml
 [licenseurl]: https://github.com/nanlabs/nancy-react-toolkit/blob/main/LICENSE
