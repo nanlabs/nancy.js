@@ -49,7 +49,7 @@ Collection of examples that solve specific problems using small pieces of code.
 ### State Management examples
 
 The following examples show how to solve the same problem using different approaches from
-normal React hooks to State management libraries.
+normal React hooks to State management libraries. Check the full list with more details in the [state management examples](./examples/state-management/) directory.
 
 #### Basic Example
 
