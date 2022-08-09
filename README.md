@@ -42,6 +42,21 @@ Collection of examples that were created as a composition of different examples 
 can be found separately in the [examples](./examples/) directory.
 Read more about the examples in the [examples](#examples) section.
 
+- [React Webpack Boilerplate](https://github.com/nanlabs/react-webpack-boilerplate/tree/main/.github/workflows). This example contains the following features:
+  - Boilerplate generated using [create-react-webpack-project](https://www.npmjs.com/package/create-react-webpack-project)
+  - Contains GitHub Actions with the following workflows:
+    - Main Validation (ESLint + Prettier + E2E Tests)
+    - Manual Execution with Params (Automated Tests execution)
+    - Periodic Test execution and History update
+    - Pull Requests validation with DangerJS
+  - Full local development setup
+  - Production ready setup
+  - Webpack + ESBuild Loader
+  - CSS or LESS or SaSS (global and modules)
+  - ESLint + Prettier
+  - Jest + React Testing Library
+  - and more!
+
 ## Examples
 
 Collection of examples that solve specific problems using small pieces of code.
