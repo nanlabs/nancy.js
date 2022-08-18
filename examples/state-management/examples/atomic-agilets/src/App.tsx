@@ -1,9 +1,9 @@
-import {useAgile} from "@agile-ts/react";
+import { useAgile } from "@agile-ts/react";
 
-import {IS_RUNNING, NAMES, SECONDS, toggleTimer} from "./store";
+import { IS_RUNNING, NAMES, SECONDS, toggleTimer } from "./store";
 
 const TimerDisplay: React.FunctionComponent = () => {
-  const seconds = useAgile(SECONDS)
+  const seconds = useAgile(SECONDS);
   return (
     <div className="text-3xl">
       <span className="mr-5 font-bold">Stopwatch:</span>
@@ -27,7 +27,7 @@ const TimerToggle: React.FunctionComponent = () => {
 };
 
 const Names: React.FunctionComponent = () => {
-  const names = useAgile(NAMES)
+  const names = useAgile(NAMES);
   return names ? (
     <>
       <div className="text-3xl font-bold mb-5">Data</div>

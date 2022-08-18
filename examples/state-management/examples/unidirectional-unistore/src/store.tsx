@@ -22,14 +22,14 @@ export const asyncFunctions = (store: Store<StoreState>) => {
         store.setState({ running: true });
         timer = setInterval(() => {
           store.setState({ seconds: store.getState().seconds + 0.1 });
-          if(store.getState().seconds > 2 && !namesRequested) {
+          if (store.getState().seconds > 2 && !namesRequested) {
             namesRequested = true;
-            fetch('names.json')
-              .then(res => res.json())
+            fetch("names.json")
+              .then((res) => res.json())
               .then(({ names }) => store.setState({ names }));
           }
-        }, 100);  
+        }, 100);
       }
-    }
-  }
-}
+    },
+  };
+};
