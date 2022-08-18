@@ -118,13 +118,13 @@ Contributions are welcome!
 
 ## Contributors
 
-<a href="https://github.com/nanlabs/nancy-react-toolkit/contributors">
-  <img src="https://contrib.rocks/image?repo=nanlabs/nancy-react-toolkit"/>
+<a href="https://github.com/nanlabs/nancy.js/contributors">
+  <img src="https://contrib.rocks/image?repo=nanlabs/nancy.js"/>
 </a>
 
 Made with [contributors-img](https://contrib.rocks).
 
-[shellcheckbadge]: https://github.com/nanlabs/nancy-react-toolkit/actions/workflows/shellcheck.yml/badge.svg
+[shellcheckbadge]: https://github.com/nanlabs/nancy.js/actions/workflows/shellcheck.yml/badge.svg
 [licensebadge]: https://img.shields.io/badge/License-MIT-blue.svg
-[shellcheckurl]: https://github.com/nanlabs/nancy-react-toolkit/actions/workflows/shellcheck.yml
-[licenseurl]: https://github.com/nanlabs/nancy-react-toolkit/blob/main/LICENSE
+[shellcheckurl]: https://github.com/nanlabs/nancy.js/actions/workflows/shellcheck.yml
+[licenseurl]: https://github.com/nanlabs/nancy.js/blob/main/LICENSE

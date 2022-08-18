@@ -1,5 +1,5 @@
 {
-  "name": "nancy-react-toolkit",
+  "name": "nancy.js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nanlabs/nancy-react-toolkit.git"
+    "url": "git+https://github.com/nanlabs/nancy.js.git"
   },
   "author": "ulises-jeremias",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nanlabs/nancy-react-toolkit/issues"
+    "url": "https://github.com/nanlabs/nancy.js/issues"
   },
-  "homepage": "https://github.com/nanlabs/nancy-react-toolkit#readme",
+  "homepage": "https://github.com/nanlabs/nancy.js#readme",
   "devDependencies": {
     "danger": "^11.1.1"
   }
