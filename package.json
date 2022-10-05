@@ -12,14 +12,12 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint-config-nancy-ts": "*",
-    "prettier": "latest",
-    "turbo": "latest"
+    "prettier": "^2.7.1",
+    "turbo": "^1.5.5"
   },
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "dependencies": {},
   "packageManager": "npm@8.1.2"
 }
