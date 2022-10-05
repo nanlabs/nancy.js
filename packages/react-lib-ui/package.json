@@ -13,8 +13,7 @@
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "eslint": "^7.32.0",
-    "eslint-config-nancy": "*",
-    "eslint-config-nancy-ts": "*",
+    "eslint-config-nancy-react": "*",
     "react": "^17.0.2",
     "tsconfig": "*",
     "typescript": "^4.5.2"

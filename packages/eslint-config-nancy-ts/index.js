@@ -1,3 +1,7 @@
 module.exports = {
-  extends: ["nancy"],
+  parser: "@typescript-eslint/parser",
+  extends: [
+    "nancy",
+    "plugin:@typescript-eslint/recommended",
+  ],
 };

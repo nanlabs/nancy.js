@@ -27,7 +27,7 @@
     "@types/react": "18.0.17",
     "babel-loader": "^8.2.5",
     "eslint": "7.32.0",
-    "eslint-config-nancy-ts": "*",
+    "eslint-config-nancy-react": "*",
     "tsconfig": "*",
     "typescript": "^4.5.3"
   }
