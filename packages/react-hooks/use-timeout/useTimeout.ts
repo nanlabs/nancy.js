@@ -1,4 +1,4 @@
-import { EffectCallback, MutableRefObject, useEffect, useRef } from 'react';
+import { EffectCallback, MutableRefObject, useEffect, useRef } from "react";
 
 /**
  * Use setTimeout with Hooks in a declarative way.
@@ -8,7 +8,7 @@ import { EffectCallback, MutableRefObject, useEffect, useRef } from 'react';
  */
 const useTimeout = (
   callback: EffectCallback,
-  delay: number | null,
+  delay: number | null
 ): MutableRefObject<number | null> => {
   const timeoutRef = useRef<number | null>(null);
   const callbackRef = useRef(callback);
@@ -28,7 +28,7 @@ const useTimeout = (
   // Set up the timeout:
 
   useEffect(() => {
-    if (typeof delay !== 'number') {
+    if (typeof delay !== "number") {
       return undefined;
     }
 
@@ -40,6 +40,6 @@ const useTimeout = (
 
   // In case you want to manually clear the timeout from the consuming component...:
   return timeoutRef;
-}
+};
 
 export default useTimeout;

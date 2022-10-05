@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useState } from 'react';
+import { RefObject, useEffect, useState } from "react";
 
 export interface UseIntersectionObserverConfig
   extends IntersectionObserverInit {
@@ -10,7 +10,7 @@ const useIntersectionObserver = (
   {
     threshold = 0,
     root = null,
-    rootMargin = '0%',
+    rootMargin = "0%",
     freezeOnceVisible = false,
   }: UseIntersectionObserverConfig
 ): IntersectionObserverEntry | undefined => {
@@ -37,6 +37,6 @@ const useIntersectionObserver = (
   }, [elementRef, JSON.stringify(threshold), root, rootMargin, frozen]);
 
   return entry;
-}
+};
 
 export default useIntersectionObserver;
