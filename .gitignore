@@ -32,3 +32,7 @@ yarn-error.log*
 # turbo
 .turbo
 dist
+
+# Storybook
+out
+storybook-static/
