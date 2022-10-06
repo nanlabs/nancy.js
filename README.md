@@ -14,6 +14,7 @@
 </div>
 <div align="center">
 
+[![Linter][linterbadge]][linterurl]
 [![Shell Check][shellcheckbadge]][shellcheckurl]
 [![License: MIT][licensebadge]][licenseurl]
 
@@ -124,7 +125,9 @@ Contributions are welcome!
 
 Made with [contributors-img](https://contrib.rocks).
 
+[linterbadge]: https://github.com/nanlabs/nancy.js/actions/workflows/lint.yml/badge.svg
 [shellcheckbadge]: https://github.com/nanlabs/nancy.js/actions/workflows/shellcheck.yml/badge.svg
 [licensebadge]: https://img.shields.io/badge/License-MIT-blue.svg
+[linterurl]: https://github.com/nanlabs/nancy.js/actions/workflows/lint.yml
 [shellcheckurl]: https://github.com/nanlabs/nancy.js/actions/workflows/shellcheck.yml
 [licenseurl]: https://github.com/nanlabs/nancy.js/blob/main/LICENSE
