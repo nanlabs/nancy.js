@@ -1,1 +1,1 @@
-export { default as useMemoAllDepsEffect } from "./useAllDepsChangeEffect";
+export { default as useAllDepsChangeEffect } from "./useAllDepsChangeEffect";

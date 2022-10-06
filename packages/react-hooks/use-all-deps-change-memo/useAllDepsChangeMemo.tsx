@@ -1,9 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
+import { DependencyList, useEffect, useMemo, useState } from "react";
 
-const didAllDependenciesChange = (target: any[], newDeps: any[]) =>
-  target.every((dep, i) => dep !== newDeps[i]);
+const didAllDependenciesChange = (
+  target: DependencyList,
+  newDeps: DependencyList
+) => target.every((dep, i) => dep !== newDeps[i]);
 
-const useMemoAllDepsChange = (fn: () => unknown, deps: any[]) => {
+const useMemoAllDepsChange = <T,>(fn: () => T, deps: DependencyList): T => {
   const [changeTarget, setChangeTarget] = useState(deps);
 
   useEffect(() => {
@@ -12,7 +14,7 @@ const useMemoAllDepsChange = (fn: () => unknown, deps: any[]) => {
     }
   }, [changeTarget, deps]);
 
-  return useMemo(fn, [fn, changeTarget]);
+  return useMemo(fn, [changeTarget]);
 };
 
 export default useMemoAllDepsChange;

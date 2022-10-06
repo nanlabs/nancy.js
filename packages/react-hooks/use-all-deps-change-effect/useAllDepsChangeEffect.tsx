@@ -1,9 +1,11 @@
-import { EffectCallback, useEffect, useState } from "react";
+import { DependencyList, EffectCallback, useEffect, useState } from "react";
 
-const didAllDependenciesChange = (target: any[], newDeps: any[]) =>
-  target.every((dep, i) => dep !== newDeps[i]);
+const didAllDependenciesChange = (
+  target: DependencyList,
+  newDeps: DependencyList
+) => target.every((dep, i) => dep !== newDeps[i]);
 
-const useAllDepsChangeEffect = (fn: EffectCallback, deps: any[]) => {
+const useAllDepsChangeEffect = (fn: EffectCallback, deps: DependencyList) => {
   const [changeTarget, setChangeTarget] = useState(deps);
 
   useEffect(() => {
@@ -12,7 +14,7 @@ const useAllDepsChangeEffect = (fn: EffectCallback, deps: any[]) => {
     }
   }, [deps, changeTarget]);
 
-  useEffect(fn, [fn, changeTarget]);
+  useEffect(fn, [changeTarget]);
 };
 
 export default useAllDepsChangeEffect;

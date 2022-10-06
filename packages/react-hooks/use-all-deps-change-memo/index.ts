@@ -1,1 +1,1 @@
-export { default as useMemoAllDepsChange } from "./useAllDepsChangeMemo";
+export { default as useAllDepsChangeMemo } from "./useAllDepsChangeMemo";
