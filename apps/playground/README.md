@@ -23,7 +23,7 @@ npm run storybook -w @nancy/playground
 If you have already been playing with this repo, the above command is enought but if it is the first time that you are going to run this project execute the following commands from the root of the project:
 
 ```bash
-fnm use 
+fnm use
 # or use your preferred node version manager to install the corresponding node version
 # node version v16.13.2 check it out in .node-version from root.
 
@@ -32,8 +32,10 @@ npm run build
 npm run storybook -w @nancy/playground
 ```
 
-
 ## Contributing
-Contributions are welcome! Pull requests are welcome. 
+
+Contributions are welcome! Pull requests are welcome.
 
 If you have a more representative example of some of the components, hooks, helpers, feel free to create a new story and create a pull request.
+
+Read the [CONTRIBUTING guide](../../CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.
