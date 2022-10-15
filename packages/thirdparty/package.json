@@ -1,0 +1,21 @@
+{
+  "name": "@nancy/thirdparty",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint **/*.ts*",
+    "build": "tsup index.ts --format esm,cjs --dts",
+    "dev": "tsup index.ts --format esm,cjs --watch --dts"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-nancy-ts": "*",
+    "tsconfig": "*",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "tsup": "^6.2.3"
+  }
+}
