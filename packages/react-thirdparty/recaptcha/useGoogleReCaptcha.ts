@@ -7,6 +7,10 @@ export interface GoogleReCaptchaConfig {
   runOnMountOnly?: boolean;
 }
 
+/**
+ * useGoogleReCaptcha hook to use Google ReCaptcha v3
+ * @param {GoogleReCaptchaConfig} props - Google ReCaptcha v3 config
+ */
 export const useGoogleReCaptcha = ({
   action,
   onVerify,
