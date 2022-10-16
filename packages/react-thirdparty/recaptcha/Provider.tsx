@@ -8,6 +8,21 @@ enum GoogleRecaptchaError {
   SCRIPT_NOT_AVAILABLE = "Recaptcha script is not available",
 }
 
+export interface ReCaptchaExecuteOptions {
+  action: string
+}
+
+interface ReCaptchaInstance {
+  ready: (cb: () => unknown) => unknown
+  execute: (key: string, options: ReCaptchaExecuteOptions) => Promise<string>
+  render: (id: string, options: ReCaptchaRenderOptions) => unknown
+}
+
+interface ReCaptchaRenderOptions {
+  sitekey: string
+  size: 'invisible'
+}
+
 export interface GoogleReCaptchaProviderProps {
   reCaptchaKey?: string;
   language?: string;
@@ -28,23 +43,21 @@ export const GoogleReCaptchaProvider: FC<GoogleReCaptchaProviderProps> = ({
   reCaptchaKey,
   scriptProps,
 }) => {
-  const [grecaptcha, setGrecaptcha] = useState(null);
+  const [grecaptcha, setGrecaptcha] = useState<ReCaptchaInstance | null>(null);
 
   const googleRecaptchaSrc = () => {
     const hostName = useRecaptchaNet ? "recaptcha.net" : "google.com";
 
     return `https://www.${hostName}/recaptcha/api.js`;
   };
-
+  
   const executeReCaptcha = useCallback(
-    async (action?: string): Promise<string> => {
-      if (!grecaptcha) {
+    async (action?: ReCaptchaExecuteOptions): Promise<string> => {
+      if (!grecaptcha || !reCaptchaKey || !action) {
         return "";
       }
 
-      // TODO: Find a better way to define the type for this method. Check grecaptcha docs for more info. 
-      // @ts-ignore: grecaptcha has not a good documentation around this method to define a proper type.
-      return grecaptcha.execute(reCaptchaKey, { action });
+      return grecaptcha.execute(reCaptchaKey, action);
     },
     [reCaptchaKey, grecaptcha]
   );
