@@ -1,7 +1,8 @@
 import { createContext } from "react";
+import { ReCaptchaExecuteOptions } from "./Provider";
 
 export interface GoogleReCaptchaConsumerProps {
-  executeReCaptcha?: (action?: string) => Promise<string>;
+  executeReCaptcha?: (action?: ReCaptchaExecuteOptions) => Promise<string>;
 }
 
 const GoogleReCaptchaContext = createContext<GoogleReCaptchaConsumerProps>({
