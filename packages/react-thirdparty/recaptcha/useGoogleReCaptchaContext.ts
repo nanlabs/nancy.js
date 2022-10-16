@@ -1,8 +1,4 @@
-import React from "react";
-import {
-  GoogleReCaptchaContext,
-  GoogleReCaptchaConsumerProps,
-} from "./Context";
+import { useContext } from "react";
+import { GoogleReCaptchaContext } from "./Context";
 
-export const useGoogleReCaptchaContext = () =>
-  React.useContext<GoogleReCaptchaConsumerProps>(GoogleReCaptchaContext);
+export const useGoogleReCaptchaContext = () => useContext(GoogleReCaptchaContext);
