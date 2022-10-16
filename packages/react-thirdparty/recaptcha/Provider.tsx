@@ -42,6 +42,8 @@ export const GoogleReCaptchaProvider: FC<GoogleReCaptchaProviderProps> = ({
         return "";
       }
 
+      // TODO: Find a better way to define the type for this method.
+      // @ts-ignore: grecaptcha has not a good documentation around this method to define a proper type.
       return grecaptcha.execute(reCaptchaKey, { action });
     },
     [reCaptchaKey, grecaptcha]
