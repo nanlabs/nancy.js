@@ -13,14 +13,7 @@ export interface ReCaptchaExecuteOptions {
 }
 
 interface ReCaptchaInstance {
-  ready: (cb: () => unknown) => unknown
   execute: (key: string, options: ReCaptchaExecuteOptions) => Promise<string>
-  render: (id: string, options: ReCaptchaRenderOptions) => unknown
-}
-
-interface ReCaptchaRenderOptions {
-  sitekey: string
-  size: 'invisible'
 }
 
 export interface GoogleReCaptchaProviderProps {
