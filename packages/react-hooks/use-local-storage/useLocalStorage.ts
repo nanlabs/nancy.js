@@ -22,7 +22,7 @@ const storeValue = async <T>(key: string, value: T): Promise<void> => {
  */
 const useLocalStorage = <T>(key: string, initialValue: T): [T, Dispatch<SetStateAction<T>>] => {
 
-  const getStoredValue = useCallback(<T>(key: string, initialValue: T): T => {
+  const getStoredValue = () => {
     if (typeof window === "undefined") {
       return initialValue;
     }
@@ -34,9 +34,9 @@ const useLocalStorage = <T>(key: string, initialValue: T): [T, Dispatch<SetState
         console.log(err);
         return initialValue;
     }
-  }, [key, initialValue]);
+  };
 
-  const [storedValue, setStoredValue] = useState(getStoredValue(key, initialValue));
+  const [storedValue, setStoredValue] = useState(getStoredValue());
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -44,7 +44,7 @@ const useLocalStorage = <T>(key: string, initialValue: T): [T, Dispatch<SetState
      }
   
     const handleStorageChange = () => {
-      setStoredValue(getStoredValue(key, initialValue));
+      setStoredValue(getStoredValue());
     };
   
     // this only works for other documents, not the current one
