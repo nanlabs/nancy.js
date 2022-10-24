@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useCallback, useEffect, useState } from "react";
 
-const storeValue = async <T>(key: string, value: T): Promise<void> => {
+const storeValue = <T>(key: string, value: T): void => {
   if (typeof window === "undefined") {
     return;
   }
@@ -62,9 +62,8 @@ const useLocalStorage = <T>(key: string, initialValue: T): [T, Dispatch<SetState
   const storeState: Dispatch<SetStateAction<T>> = useCallback(
     (value) => {
       const valueToStore = value instanceof Function ? (value as ((prevState: T) => T))(storedValue) : value;
-      storeValue(key, valueToStore).then(() => {
-        setStoredValue(valueToStore);
-      });
+      storeValue(key, valueToStore);
+      setStoredValue(valueToStore);
     },
     [key, storedValue]
   );
