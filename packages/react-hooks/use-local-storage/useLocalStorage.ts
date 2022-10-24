@@ -1,25 +1,14 @@
-import { Dispatch, SetStateAction, useCallback, useState } from "react";
+import { Dispatch, SetStateAction, useCallback, useEffect, useState } from "react";
 
 const storeValue = <T>(key: string, value: T): void => {
   if (typeof window === "undefined") {
     return;
   }
-
-  const valueSerialized = JSON.stringify(value);
-  window.localStorage.setItem(key, valueSerialized);
-};
-
-const getStoredValue = <T>(key: string, initialValue: T): T => {
-  if (typeof window === "undefined") {
-    return initialValue;
-  }
-
   try {
-      const storedValue = window.localStorage.getItem(key);
-      return storedValue ? JSON.parse(storedValue) : initialValue;
+    const valueSerialized = JSON.stringify(value);
+    window.localStorage.setItem(key, valueSerialized);
   } catch (err) {
-      console.log(err);
-      return initialValue;
+    console.log(err);
   }
 };
 
@@ -31,22 +20,54 @@ const getStoredValue = <T>(key: string, initialValue: T): T => {
  *
  * @param key - Key to use in local storage to store value
  */
-const useLocalStorage = <T>(key: string, initialValue: T): [T, Dispatch<SetStateAction<T>>] | [T] => {
+const useLocalStorage = <T>(key: string, initialValue: T): [T, Dispatch<SetStateAction<T>>] => {
+
+  const getStoredValue = useCallback(<T>(key: string, initialValue: T): T => {
+    if (typeof window === "undefined") {
+      return initialValue;
+    }
+  
+    try {
+        const storedValue = window.localStorage.getItem(key);
+        return storedValue ? JSON.parse(storedValue) : initialValue;
+    } catch (err) {
+        console.log(err);
+        return initialValue;
+    }
+  }, [key, initialValue]);
+
   const [state, setState] = useState(getStoredValue(key, initialValue));
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+        return;
+     }
+  
+    const handleStorageChange = () => {
+      setState(getStoredValue(key, initialValue));
+    };
+  
+    // this only works for other documents, not the current one
+    window.addEventListener("storage", handleStorageChange);
+  
+    // this is a custom event, triggered in writeValueToLocalStorage
+    window.addEventListener("local-storage", handleStorageChange);
+  
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+      window.removeEventListener("local-storage", handleStorageChange);
+    };
+  }, [key, initialValue]);
 
   const storeState: Dispatch<SetStateAction<T>> = useCallback(
     (value) => {
-      let newValue = value;
-      if (typeof value === "function") {
-        newValue = (value as ((prevState: T) => T))(state);
-      }
-      setState(newValue);
-      storeValue(key, newValue);
+      const valueToStore = value instanceof Function ? (value as ((prevState: T) => T))(state) : value;
+      setState(valueToStore);
+      storeValue(key, valueToStore);
     },
     [key, state]
   );
 
-  if (typeof window === "undefined") return [initialValue as T];
   return [state, storeState];
 };
 
