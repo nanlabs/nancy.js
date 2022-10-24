@@ -10,7 +10,7 @@
 
 </div>
 
-Collection of examples that were created with the goals to have examples of ours React components, hooks, apps and libraries that are created in different packages here in this repository. To create the examples, in this app we are using storybook stories.
+This app is created with the goals to have examples of ours React components, hooks and libraries that are created in different packages in this repository. To create the examples, in this app we are using storybook stories.
 
 ## Usage
 
