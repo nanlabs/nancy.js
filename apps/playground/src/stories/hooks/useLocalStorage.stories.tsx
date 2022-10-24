@@ -37,7 +37,7 @@ export const Example: FC = () => {
         <div>
           <code>valueThree:</code>
           <pre>Name: {valueThree.name}</pre>
-          <pre>Name: {valueThree.age}</pre>
+          <pre>Age: {valueThree.age}</pre>
         </div>
       </SimpleRowExample>
       <SimpleRowExample>

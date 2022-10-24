@@ -36,7 +36,7 @@ const useLocalStorage = <T>(key: string, initialValue: T): [T, Dispatch<SetState
     }
   }, [key, initialValue]);
 
-  const [state, setState] = useState(getStoredValue(key, initialValue));
+  const [storedValue, setStoredValue] = useState(getStoredValue(key, initialValue));
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -44,7 +44,7 @@ const useLocalStorage = <T>(key: string, initialValue: T): [T, Dispatch<SetState
      }
   
     const handleStorageChange = () => {
-      setState(getStoredValue(key, initialValue));
+      setStoredValue(getStoredValue(key, initialValue));
     };
   
     // this only works for other documents, not the current one
@@ -61,14 +61,14 @@ const useLocalStorage = <T>(key: string, initialValue: T): [T, Dispatch<SetState
 
   const storeState: Dispatch<SetStateAction<T>> = useCallback(
     (value) => {
-      const valueToStore = value instanceof Function ? (value as ((prevState: T) => T))(state) : value;
-      setState(valueToStore);
+      const valueToStore = value instanceof Function ? (value as ((prevState: T) => T))(storedValue) : value;
+      setStoredValue(valueToStore);
       storeValue(key, valueToStore);
     },
-    [key, state]
+    [key, storedValue]
   );
 
-  return [state, storeState];
+  return [storedValue, storeState];
 };
 
 export default useLocalStorage;
