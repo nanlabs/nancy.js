@@ -1,20 +1,25 @@
 import { Dispatch, SetStateAction, useCallback, useState } from "react";
 
 const storeValue = <T>(key: string, value: T): void => {
-  if (!window) return;
+  if (typeof window === "undefined") {
+    return;
+  }
 
   const valueSerialized = JSON.stringify(value);
-  localStorage.setItem(key, valueSerialized);
+  window.localStorage.setItem(key, valueSerialized);
 };
 
-const getInitialStoredValue = <T>(key: string, initialValue: T): T => {
-  if (!window) return initialValue;
-
-  const storedValue = localStorage.getItem(key);
-  if (storedValue !== null) return JSON.parse(storedValue);
-  else {
-    storeValue(key, initialValue);
+const getStoredValue = <T>(key: string, initialValue: T): T => {
+  if (typeof window === "undefined") {
     return initialValue;
+  }
+
+  try {
+      const storedValue = window.localStorage.getItem(key);
+      return storedValue ? JSON.parse(storedValue) : initialValue;
+  } catch (err) {
+      console.log(err);
+      return initialValue;
   }
 };
 
@@ -27,7 +32,7 @@ const getInitialStoredValue = <T>(key: string, initialValue: T): T => {
  * @param key - Key to use in local storage to store value
  */
 const useLocalStorage = <T>(key: string, initialValue: T): [T, Dispatch<SetStateAction<T>>] | [T] => {
-  const [state, setState] = useState(getInitialStoredValue(key, initialValue));
+  const [state, setState] = useState(getStoredValue(key, initialValue));
 
   const storeState: Dispatch<SetStateAction<T>> = useCallback(
     (value) => {
@@ -41,7 +46,7 @@ const useLocalStorage = <T>(key: string, initialValue: T): [T, Dispatch<SetState
     [key, state]
   );
 
-  if (!window) return [initialValue as T];
+  if (typeof window === "undefined") return [initialValue as T];
   return [state, storeState];
 };
 
