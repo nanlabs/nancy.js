@@ -1,10 +1,9 @@
 import { useCallback, useEffect } from "react";
-import { ReCaptchaExecuteOptions } from "./Provider";
 import { useGoogleReCaptchaContext } from "./useGoogleReCaptchaContext";
 
 export interface GoogleReCaptchaConfig {
   onVerify: (token: string) => void | Promise<void>;
-  action?: ReCaptchaExecuteOptions;
+  action?: string;
   runOnMountOnly?: boolean;
 }
 
@@ -27,7 +26,7 @@ export const useGoogleReCaptcha = ({
       return;
     }
 
-    const token = await executeReCaptcha(action);
+    const token = await executeReCaptcha({ action: action || "" });
 
     if (!onVerify) {
       console.warn("Please define an onVerify function");
