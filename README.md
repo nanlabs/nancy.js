@@ -26,15 +26,6 @@ here at [NaN Labs](https://www.nanlabs.com/).
 - [Applications](#applications)
 - [Packages](#packages)
 - [Examples](#examples)
-  - [State Management examples](#state-management-examples)
-    - [Basic Example](#basic-example)
-    - [React Hooks](#react-hooks)
-    - [Finite State Machine](#finite-state-machine)
-    - [Remote Data Fetching](#remote-data-fetching)
-    - [Reactive State Management](#reactive-state-management)
-    - [Atomic State Management](#atomic-state-management)
-    - [Unidirectional State Management](#unidirectional-state-management)
-    - [Bidirectional State Management](#bidirectional-state-management)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
 
@@ -43,6 +34,8 @@ here at [NaN Labs](https://www.nanlabs.com/).
 Collection of apps and examples that were created as a composition of different examples that
 can be found separately in the [examples](./examples/) directory.
 Read more about the examples in the [examples](#examples) section.
+
+- [Playground](./apps/playground/) - This app was created with the goal to have examples of ours React components, hooks and libraries that are created in different packages in this repository. To create the examples, in this app we are using storybook stories. Check it out this simple example of [Storybook](./apps/playground/src/stories/Header.stories.tsx).
 
 - [React Webpack Boilerplate](https://github.com/nanlabs/react-webpack-boilerplate/tree/main/.github/workflows). This example contains the following features:
 
@@ -60,8 +53,6 @@ Read more about the examples in the [examples](#examples) section.
   - Jest + React Testing Library
   - and more!
 
-- [Playground](./apps/playground/) - This app was created with the goal to have examples of ours React components, hooks and libraries that are created in different packages in this repository. To create the examples, in this app we are using storybook stories. Check it out this simple example of [Storybook](./apps/playground/src/stories/Header.stories.tsx).
-
 ## Packages
 
 We provide a collection of different packages that can be used in different projects. Each package has its own README file with more details about the package. Check out the [packages](./packages/) directory.
@@ -70,56 +61,7 @@ We provide a collection of different packages that can be used in different proj
 
 Collection of examples that solve specific problems using small pieces of code.
 
-### State Management examples
-
-The following examples show how to solve the same problem using different approaches from
-normal React hooks to State management libraries. Check the full list with more details in the [state management examples](./examples/state-management/) directory.
-
-#### Basic Example
-
-- [Prop Drilling](./examples/state-management/examples/hooks-prop-drilling/)
-
-#### React Hooks
-
-- [Context](./examples/state-management/examples/hooks-context/)
-- [Global State](./examples/state-management/examples/hooks-global-state/)
-- [Hookstate](./examples/state-management/examples/hooks-hookstate/)
-- [Teaful](./examples/state-management/examples/hooks-teaful/)
-
-#### Finite State Machine
-
-- [XState](./examples/state-management/examples/fsm-xstate/)
-
-#### Remote Data Fetching
-
-- [React Query](./examples/state-management/examples/api-react-query/)
-
-#### Reactive State Management
-
-- [Effector](./examples/state-management/examples/reactive-effector/)
-- [Akita](./examples/state-management/examples/reactive-akita/)
-- [Rxjs](./examples/state-management/examples/reactive-rxjs/)
-- [Storeon](./examples/state-management/examples/reactive-storeon/)
-
-#### Atomic State Management
-
-- [Jotai](./examples/state-management/examples/atomic-jotai/)
-- [Recoil](./examples/state-management/examples/atomic-recoil/)
-- [AgileTs](./examples/state-management/examples/atomic-agilets/)
-
-#### Unidirectional State Management
-
-- [Zustand](./examples/state-management/examples/unidirectional-zustand/)
-- [Redux Toolkit](./examples/state-management/examples/unidirectional-redux-toolkit/)
-- [Rematch](./examples/state-management/examples/unidirectional-rematch/)
-- [Unistore](./examples/state-management/examples/unidirectional-unistore/)
-
-#### Bidirectional State Management
-
-- [MobX](./examples/state-management/examples/bidirectional-mobx/)
-- [Valtio](./examples/state-management/examples/bidirectional-valtio/)
-- [MobX State Tree](./examples/state-management/examples/bidirectional-mobx-state-tree/)
-- [React Easy State](./examples/state-management/examples/bidirectional-easy-state/)
+We have a collection of examples that solve specific problems using small pieces of code. Each example has its own README file with more details about the example. Check out the [examples](./examples/) directory for more details!
 
 ## Contributing
 
