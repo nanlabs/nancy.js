@@ -1,9 +1,10 @@
 import { useCallback, useEffect } from "react";
+import { ReCaptchaExecuteOptions } from "./Provider";
 import { useGoogleReCaptchaContext } from "./useGoogleReCaptchaContext";
 
 export interface GoogleReCaptchaConfig {
   onVerify: (token: string) => void | Promise<void>;
-  action?: string;
+  action?: ReCaptchaExecuteOptions;
   runOnMountOnly?: boolean;
 }
 
