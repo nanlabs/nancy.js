@@ -60,7 +60,7 @@ Read more about the examples in the [examples](#examples) section.
   - Jest + React Testing Library
   - and more!
 
-- [Playground](./apps/playground/) - This [playground](./apps/playground/) app is created with the goal to have examples of ours React components, hooks and libraries that are created in different packages in this repository. To create the examples, in this app we are using storybook stories. Check it out this simple example of [Storybook](./apps/playground/src/stories/Header.stories.tsx).
+- [Playground](./apps/playground/) - This app was created with the goal to have examples of ours React components, hooks and libraries that are created in different packages in this repository. To create the examples, in this app we are using storybook stories. Check it out this simple example of [Storybook](./apps/playground/src/stories/Header.stories.tsx).
 
 ## Packages
 
