@@ -9,11 +9,11 @@ enum GoogleRecaptchaError {
 }
 
 export interface ReCaptchaExecuteOptions {
-  action: string
+  action: string;
 }
 
 interface ReCaptchaInstance {
-  execute: (key: string, options: ReCaptchaExecuteOptions) => Promise<string>
+  execute: (key: string, options: ReCaptchaExecuteOptions) => Promise<string>;
 }
 
 export interface GoogleReCaptchaProviderProps {
@@ -43,7 +43,7 @@ export const GoogleReCaptchaProvider: FC<GoogleReCaptchaProviderProps> = ({
 
     return `https://www.${hostName}/recaptcha/api.js`;
   };
-  
+
   const executeReCaptcha = useCallback(
     async (action?: ReCaptchaExecuteOptions): Promise<string> => {
       if (!grecaptcha || !reCaptchaKey || !action) {

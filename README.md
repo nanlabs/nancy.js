@@ -24,7 +24,7 @@ This repository contains different React components, hooks, apps and libraries t
 here at [NaN Labs](https://www.nanlabs.com/).
 
 - [Applications](#applications)
-    - [Playground](#playground)
+  - [Playground](#playground)
 - [Examples](#examples)
   - [State Management examples](#state-management-examples)
     - [Basic Example](#basic-example)
@@ -58,9 +58,11 @@ Read more about the examples in the [examples](#examples) section.
   - ESLint + Prettier
   - Jest + React Testing Library
   - and more!
-  
+
 #### Playground
+
 This [playground](./apps/playground/) app is created with the goals to have examples of ours React components, hooks and libraries that are created in different packages in this repository. To create the examples, in this app we are using storybook stories. Check it out this simple example of [storybook](./apps/playground/src/stories/Header.stories.tsx).
+
 ## Examples
 
 Collection of examples that solve specific problems using small pieces of code.
