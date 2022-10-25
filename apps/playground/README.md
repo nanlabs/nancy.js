@@ -23,15 +23,9 @@ fnm use
 npm install
 ```
 
-## Usage
+## Quickstart
 
 The ideal way to run this app is from the root of the repo by executing the following command.
-
-```bash
-npm run storybook -w @nancy/playground
-```
-
-If you have already been playing with this repo, the above command is enought but if it is the first time that you are going to run this project execute the following commands from the root of the project:
 
 ```bash
 npm run storybook -w @nancy/playground
