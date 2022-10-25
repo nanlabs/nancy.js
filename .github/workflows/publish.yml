@@ -43,7 +43,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Build
+        run: npm run build
+
       - name: Publish to GitHub Packages
-        run: npm publish-package
+        run: $(npm bin)/changeset publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

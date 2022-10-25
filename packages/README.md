@@ -6,11 +6,9 @@
         src="https://avatars.githubusercontent.com/u/4426989?s=200&v=4"
     >
 </p>
-<h1>Storybook Playground</h1>
+<h1>Nancy.js Packages</h1>
 
 </div>
-
-This app is created with the goals to have examples of ours React components, hooks and libraries that are created in different packages in this repository. To create the examples, in this app we are using storybook stories.
 
 ## Requirements
 
@@ -23,18 +21,18 @@ fnm use
 npm install
 ```
 
-## Usage
+## Publishing Packages
 
-The ideal way to run this app is from the root of the repo by executing the following command.
+We use [Changesets](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md) to publish packages. This is a tool that allows us to publish packages to NPM with a single command. It also allows us to create a changelog for each package.
 
-```bash
-npm run storybook -w @nancy/playground
-```
+To publish a package, you need to run the following command:
 
-If you have already been playing with this repo, the above command is enought but if it is the first time that you are going to run this project execute the following commands from the root of the project:
+```sh
+# Add a new changeset
+npm run changeset
 
-```bash
-npm run storybook -w @nancy/playground
+# Build the packages, update the versions and publish them
+npm run publish-packages
 ```
 
 ## Contributing
