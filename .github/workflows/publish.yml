@@ -13,15 +13,17 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
+      id-token: write
       contents: write
       packages: write
+      pull-requests: write
+      issues: read
 
     steps:
       - name: Begin CI...
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          persist-credentials: false
 
       - name: Use Node ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -53,3 +55,6 @@ jobs:
           publish: npm run publish-packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # this is the secret sauce for authenticating to our github npm registry
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
