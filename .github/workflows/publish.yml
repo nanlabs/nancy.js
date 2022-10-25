@@ -1,37 +1,32 @@
-name: Publish package to GitHub Packages
+name: Update Nancy.js Version
 
 on:
-  release:
-    types:
-      - created
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  build:
+  update-version:
+    name: Check and update Nancy.js packages
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      packages: write
 
     steps:
       - name: Begin CI...
         uses: actions/checkout@v3
 
-      # Setup .npmrc file to publish to GitHub Packages
-      - uses: actions/setup-node@v3
-        with:
-          node-version-file: .node-version
-          registry-url: "https://npm.pkg.github.com"
-
       - name: Use Node ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version-file: .node-version
+          registry-url: 'https://npm.pkg.github.com'
 
       - name: Get npm cache directory
         id: npm-cache-dir
         run: |
           echo "::set-output name=dir::$(npm config get cache)"
+
       - uses: actions/cache@v3
         id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
         with:
@@ -43,10 +38,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        run: npm run build
-
-      - name: Publish to GitHub Packages
-        run: $(npm bin)/changeset publish
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        run: $(npm bin)/changeset publish
