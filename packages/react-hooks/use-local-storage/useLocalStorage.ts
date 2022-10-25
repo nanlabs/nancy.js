@@ -1,10 +1,4 @@
-import {
-  Dispatch,
-  SetStateAction,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
+import { Dispatch, SetStateAction, useState, useEffect } from "react";
 
 /**
  * Persist the state with local storage so that it remains after a page refresh. This can be useful
@@ -14,20 +8,16 @@ import {
  *
  * @param key - Key to use in local storage to store value
  */
-const useLocalStorage = <T>(
-  key: string,
-  initialValue: T
-): [T, Dispatch<SetStateAction<T>>] => {
-  // getStoredValue is a function that returns the value from local storage
-  const getStoredValue = () => {
+const useLocalStorage = <T>(key: string, initialValue: T | (() => T)): [T, Dispatch<SetStateAction<T>>] => {
+  const readValue = () => {
     // Prevent build error "window is undefined" but keep keep working
     if (typeof window === "undefined") {
       return initialValue;
     }
 
     try {
-      const storedValue = window.localStorage.getItem(key);
-      return storedValue ? JSON.parse(storedValue) : initialValue;
+      const item = window.localStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
     } catch (err) {
       console.log(err);
       return initialValue;
@@ -36,42 +26,52 @@ const useLocalStorage = <T>(
 
   // state to store value
   // pass initial state function to `useState` so logic is only executed once
-  const [storedValue, setStoredValue] = useState(getStoredValue);
+  const [storedValue, setStoredValue] = useState<T>(readValue);
 
   // Return a wrapped version of useState's setter function that
   // persists the new value to localStorage
-  const storeState: Dispatch<SetStateAction<T>> = useCallback(
-    (value) => {
-      try {
-        // allow value to be a function so we have same API as `useState`
-        const valueToStore =
-          value instanceof Function ? value(storedValue) : value;
-
-        // save to local storage
-        const serializedValue = JSON.stringify(value);
-        window.localStorage.setItem(key, serializedValue);
-
-        // save state
-        setStoredValue(valueToStore);
-
-        // We dispatch a custom event so every useLocalStorage hook are notified
-        window.dispatchEvent(new Event("local-storage"));
-      } catch (err) {
-        console.log(err);
-      }
-    },
-    [key, storedValue]
-  );
-
-  useEffect(() => {
-    // Prevent build error "window is undefined" but keep keep working
-    if (typeof window === "undefined") {
-      return;
+  const setValue: Dispatch<SetStateAction<T>> = (value) => {
+    // Prevent build error "window is undefined" but keeps working
+    if (typeof window == "undefined") {
+      console.warn(
+        `Tried setting localStorage key “${key}” even though environment is not a client`
+      );
     }
 
+    try {
+      // allow value to be a function so we have same API as `useState`
+      const valueToStore =
+        value instanceof Function ? value(storedValue) : value;
+
+      // save to local storage
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+
+      // save state
+      setStoredValue(valueToStore);
+
+      // We dispatch a custom event so every useLocalStorage hook are notified
+      window.dispatchEvent(new Event("local-storage"));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    setStoredValue(readValue());
+  }, []);
+
+  useEffect(() => {
     const handleStorageChange = () => {
-      setStoredValue(getStoredValue);
+      setStoredValue(readValue());
     };
+
+    // Prevent build error "window is undefined" but keeps working
+    if (typeof window == "undefined") {
+      console.warn(
+        `Window is not defined, useLocalStorage hook won't be notified of local storage changes.`
+      );
+      return;
+    }
 
     // this only works for other documents, not the current one
     window.addEventListener("storage", handleStorageChange);
@@ -85,7 +85,7 @@ const useLocalStorage = <T>(
     };
   }, []);
 
-  return [storedValue, storeState];
+  return [storedValue, setValue];
 };
 
 export default useLocalStorage;
