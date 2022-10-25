@@ -24,7 +24,7 @@ This repository contains different React components, hooks, apps and libraries t
 here at [NaN Labs](https://www.nanlabs.com/).
 
 - [Applications](#applications)
-  - [Playground](#playground)
+- [Packages](#packages)
 - [Examples](#examples)
   - [State Management examples](#state-management-examples)
     - [Basic Example](#basic-example)
@@ -45,6 +45,7 @@ can be found separately in the [examples](./examples/) directory.
 Read more about the examples in the [examples](#examples) section.
 
 - [React Webpack Boilerplate](https://github.com/nanlabs/react-webpack-boilerplate/tree/main/.github/workflows). This example contains the following features:
+
   - Boilerplate generated using [create-react-webpack-project](https://www.npmjs.com/package/create-react-webpack-project)
   - Contains GitHub Actions with the following workflows:
     - Main Validation (ESLint + Prettier + E2E Tests)
@@ -59,9 +60,11 @@ Read more about the examples in the [examples](#examples) section.
   - Jest + React Testing Library
   - and more!
 
-#### Playground
+- [Playground](./apps/playground/) - This [playground](./apps/playground/) app is created with the goal to have examples of ours React components, hooks and libraries that are created in different packages in this repository. To create the examples, in this app we are using storybook stories. Check it out this simple example of [Storybook](./apps/playground/src/stories/Header.stories.tsx).
 
-This [playground](./apps/playground/) app is created with the goals to have examples of ours React components, hooks and libraries that are created in different packages in this repository. To create the examples, in this app we are using storybook stories. Check it out this simple example of [storybook](./apps/playground/src/stories/Header.stories.tsx).
+## Packages
+
+We provide a collection of different packages that can be used in different projects. Each package has its own README file with more details about the package. Check out the [packages](./packages/) directory.
 
 ## Examples
 
