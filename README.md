@@ -23,12 +23,6 @@
 This repository contains different React components, hooks, apps and libraries that are used in different projects
 here at [NaN Labs](https://www.nanlabs.com/).
 
-- [Applications](#applications)
-- [Packages](#packages)
-- [Examples](#examples)
-- [Contributing](#contributing)
-- [Contributors](#contributors)
-
 ## Applications
 
 Collection of apps and examples that were created as a composition of different examples that
