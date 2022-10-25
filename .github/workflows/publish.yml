@@ -1,4 +1,4 @@
-name: Update Nancy.js Version
+name: Release
 
 on:
   push:
@@ -8,8 +8,8 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  update-version:
-    name: Check and update Nancy.js packages
+  release:
+    name: Release
     runs-on: ubuntu-latest
 
     steps:
