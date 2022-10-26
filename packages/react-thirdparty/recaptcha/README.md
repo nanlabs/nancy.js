@@ -29,7 +29,7 @@ The provider also provide the prop `useReCaptchaNet` to load script from `recapt
 <https://developers.google.com/recaptcha/docs/faq#can-i-use-recaptcha-globally>
 
 ```jsx
-import { GoogleReCaptchaProvider } from '@nancy/react-thirdparty'
+import { GoogleReCaptchaProvider } from '@nanlabs/react-thirdparty'
 
 ReactDom.render(
   <GoogleReCaptchaProvider
@@ -59,7 +59,7 @@ There are three ways to trigger the recaptcha validation: using the `GoogleReCap
 import {
   GoogleReCaptchaProvider,
   GoogleReCaptcha,
-} from "@nancy/react-thirdparty";
+} from "@nanlabs/react-thirdparty";
 
 ReactDom.render(
   <GoogleReCaptchaProvider reCaptchaKey="[Your recaptcha key]">
@@ -101,7 +101,7 @@ It's very simple to use the hook:
 import {
   GoogleReCaptchaProvider,
   useGoogleReCaptcha
-} from '@nancy/react-thirdparty'
+} from '@nanlabs/react-thirdparty'
 
 const YourReCaptchaComponent  = () => {
   // you should use `useCallback` just when needed

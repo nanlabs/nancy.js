@@ -51,7 +51,7 @@ jobs:
       - name: Copy the .npmrc file to the HOME directory
         run: cp $NPM_CONFIG_USERCONFIG $HOME/.npmrc
 
-      - name: Create Release Pull Request or Publish to npm
+      - name: Create Release Pull Request
         id: changesets
         uses: changesets/action@v1
         env:
@@ -61,5 +61,5 @@ jobs:
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: npm run publish-packages
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,5 +1,5 @@
 {
-  "name": "@nancy/thirdparty",
+  "name": "@nanlabs/thirdparty",
   "version": "0.2.1",
   "main": "./index.ts",
   "types": "./index.ts",
@@ -11,7 +11,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nanlabs/nancy.js.git",
-    "directory": "packages/@nancy/thirdparty"
+    "directory": "packages/@nanlabs/thirdparty"
   },
   "scripts": {
     "lint": "eslint **/*.ts*",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "eslint": "^7.32.0",
-    "eslint-config-nancy-ts": "*",
+    "@nanlabs/eslint-config-ts": "*",
     "tsconfig": "*",
     "typescript": "^4.5.2"
   },

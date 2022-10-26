@@ -1,5 +1,5 @@
 {
-  "name": "@nancy/react-hooks",
+  "name": "@nanlabs/react-hooks",
   "version": "0.2.1",
   "main": "./index.ts",
   "module": "./dist/index.mjs",
@@ -12,7 +12,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nanlabs/nancy.js.git",
-    "directory": "packages/@nancy/react-hooks"
+    "directory": "packages/@nanlabs/react-hooks"
   },
   "scripts": {
     "lint": "eslint **/*.ts*",
@@ -23,7 +23,7 @@
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "eslint": "^7.32.0",
-    "eslint-config-nancy-react": "*",
+    "@nanlabs/eslint-config-react": "*",
     "react": "^17.0.2",
     "tsconfig": "*",
     "typescript": "^4.5.2"

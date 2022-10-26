@@ -1,4 +1,4 @@
-# @nancy/react-hooks
+# @nanlabs/react-hooks
 
 ## 0.2.1
 

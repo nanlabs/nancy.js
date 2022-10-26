@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren, useState } from "react";
 import { ComponentMeta } from "@storybook/react";
-import { useAllDepsChangeMemo } from "@nancy/react-hooks";
+import { useAllDepsChangeMemo } from "@nanlabs/react-hooks";
 import { randomString } from "../../utils";
 
 const SimpleRowExample: FC<PropsWithChildren> = (props) => {

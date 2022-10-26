@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-nancy-ts",
+  "name": "@nanlabs/eslint-config-ts",
   "version": "0.2.1",
   "main": "index.js",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.39.0",
     "eslint": "^7.23.0",
-    "eslint-config-nancy": "*"
+    "@nanlabs/eslint-config": "*"
   },
   "devDependencies": {
     "typescript": "^4.7.4"

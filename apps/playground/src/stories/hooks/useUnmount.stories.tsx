@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren, useState } from "react";
 import { ComponentMeta } from "@storybook/react";
-import { useUnmount } from "@nancy/react-hooks";
+import { useUnmount } from "@nanlabs/react-hooks";
 
 const SimpleRowExample: FC<PropsWithChildren> = (props) => {
   const style = {

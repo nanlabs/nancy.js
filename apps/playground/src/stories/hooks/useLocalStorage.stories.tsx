@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren } from "react";
 import { ComponentMeta } from "@storybook/react";
-import { useLocalStorage } from "@nancy/react-hooks";
+import { useLocalStorage } from "@nanlabs/react-hooks";
 
 const SimpleRowExample: FC<PropsWithChildren> = (props) => {
   const style = {

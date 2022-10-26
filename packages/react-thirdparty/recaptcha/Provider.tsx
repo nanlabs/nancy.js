@@ -1,6 +1,6 @@
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { GoogleReCaptchaContext } from "./Context";
-import { injectGoogleReCaptchaScript, removeScript } from "@nancy/thirdparty";
+import { injectGoogleReCaptchaScript, removeScript } from "@nanlabs/thirdparty";
 
 const SCRIPT_ID = "google-recaptcha-v3";
 

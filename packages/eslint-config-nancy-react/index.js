@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    "nancy-ts",
+    "@nanlabs/eslint-config-ts",
     "plugin:react/recommended",
   ],
 };

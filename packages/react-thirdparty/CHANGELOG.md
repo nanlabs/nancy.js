@@ -1,4 +1,4 @@
-# @nancy/react-thirdparty
+# @nanlabs/react-thirdparty
 
 ## 0.2.1
 

@@ -1,4 +1,4 @@
-# @nancy/react-lib-ui
+# @nanlabs/react-lib-ui
 
 ## 0.2.1
 

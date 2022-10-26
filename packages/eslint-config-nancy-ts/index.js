@@ -1,6 +1,6 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
-  extends: ["nancy", "plugin:@typescript-eslint/recommended"],
+  extends: ["@nanlabs/eslint-config", "plugin:@typescript-eslint/recommended"],
   rules: {
     "@typescript-eslint/ban-ts-comment": [
       "error",

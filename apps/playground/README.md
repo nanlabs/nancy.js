@@ -28,7 +28,7 @@ npm install
 The ideal way to run this app is from the root of the repo by executing the following command.
 
 ```bash
-npm run storybook -w @nancy/playground
+npm run storybook -w @nanlabs/playground
 ```
 
 ## Contributing

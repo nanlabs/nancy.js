@@ -1,4 +1,4 @@
-# @nancy/thirdparty
+# @nanlabs/thirdparty
 
 ## 0.2.1
 
