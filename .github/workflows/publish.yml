@@ -29,6 +29,8 @@ jobs:
           node-version-file: .node-version
           registry-url: 'https://npm.pkg.github.com'
           scope: '@nanlabs'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get npm cache directory
         id: npm-cache-dir
@@ -46,6 +48,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Copy .npmrc to home directory
+        run: cp .npmrc ~/.npmrc
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
@@ -53,5 +58,3 @@ jobs:
           publish: npm run publish-packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # this is the secret sauce for authenticating to our github npm registry
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
