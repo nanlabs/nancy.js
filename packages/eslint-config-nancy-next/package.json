@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-nancy-ext",
+  "name": "eslint-config-nancy-next",
   "version": "0.2.1",
   "main": "index.js",
   "license": "MIT",
@@ -15,5 +15,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanlabs/nancy.js.git",
+    "directory": "packages/eslint-config-nancy-next"
   }
 }

@@ -1,4 +1,4 @@
-# eslint-config-nancy-ext
+# eslint-config-nancy-next
 
 ## 0.2.1
 

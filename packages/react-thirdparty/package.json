@@ -8,6 +8,11 @@
     "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanlabs/nancy.js.git",
+    "directory": "packages/@nancy/react-thirdparty"
+  },
   "scripts": {
     "lint": "eslint **/*.ts*",
     "build": "tsup index.tsx --format esm,cjs --dts --external react",

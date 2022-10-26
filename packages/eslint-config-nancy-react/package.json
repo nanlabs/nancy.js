@@ -16,5 +16,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanlabs/nancy.js.git",
+    "directory": "packages/eslint-config-nancy-react"
   }
 }
