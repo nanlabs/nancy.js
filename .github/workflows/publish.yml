@@ -48,13 +48,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            @nanlabs:registry=https://npm.pkg.github.com/:_authToken=$NPM_TOKEN
-          EOF
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Copy the .npmrc file to the HOME directory
+        run: cp $NPM_CONFIG_USERCONFIG $HOME/.npmrc
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
