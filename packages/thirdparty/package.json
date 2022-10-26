@@ -4,6 +4,9 @@
   "main": "./index.ts",
   "types": "./index.ts",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "lint": "eslint **/*.ts*",
     "build": "tsup index.ts --format esm,cjs --dts",

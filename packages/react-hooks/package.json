@@ -5,6 +5,9 @@
   "module": "./dist/index.mjs",
   "types": "./index.ts",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "lint": "eslint **/*.ts*",
     "build": "tsup index.ts --dts --external react",

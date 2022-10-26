@@ -13,6 +13,6 @@
     "eslint-plugin-react": "7.31.8"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   }
 }

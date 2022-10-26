@@ -4,6 +4,9 @@
   "main": "./index.tsx",
   "types": "./index.tsx",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "lint": "eslint **/*.ts*",
     "build": "tsup index.tsx --format esm,cjs --dts --external react",
