@@ -5,9 +5,6 @@
     "apps/*",
     "packages/*"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",

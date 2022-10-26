@@ -12,6 +12,7 @@
     "eslint-config-turbo": "^0.0.4"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   }
 }

@@ -6,7 +6,8 @@
   "types": "./index.ts",
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   },
   "scripts": {
     "lint": "eslint **/*.ts*",
