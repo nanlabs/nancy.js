@@ -53,3 +53,5 @@ jobs:
           publish: npm run publish-packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # this is the secret sauce for authenticating to our github npm registry
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
