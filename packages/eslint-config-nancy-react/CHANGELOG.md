@@ -1,5 +1,16 @@
 # eslint-config-nancy-react
 
+## 0.3.0
+
+### Minor Changes
+
+- cd80a9a: Renamed scope package
+
+### Patch Changes
+
+- Updated dependencies [cd80a9a]
+  - @nanlabs/eslint-config-ts@0.3.0
+
 ## 0.2.1
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@nanlabs/react-hooks",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "./index.ts",
   "module": "./dist/index.mjs",
   "types": "./index.ts",
