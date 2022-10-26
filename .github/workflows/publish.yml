@@ -60,3 +60,6 @@ jobs:
       - name: Publish
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: npm run publish-packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
