@@ -1,5 +1,11 @@
 # eslint-config-nancy
 
+## 0.3.0
+
+### Minor Changes
+
+- cd80a9a: Renamed scope package
+
 ## 0.2.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @nanlabs/react-lib-ui
 
+## 0.3.0
+
+### Minor Changes
+
+- cd80a9a: Renamed scope package
+
 ## 0.2.1
 
 ### Patch Changes

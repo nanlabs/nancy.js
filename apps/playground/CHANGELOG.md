@@ -1,5 +1,17 @@
 # @nanlabs/playground
 
+## 0.2.0
+
+### Minor Changes
+
+- cd80a9a: Renamed scope package
+
+### Patch Changes
+
+- Updated dependencies [cd80a9a]
+  - @nanlabs/react-hooks@0.3.0
+  - @nanlabs/react-lib-ui@0.3.0
+
 ## 0.1.1
 
 ### Patch Changes

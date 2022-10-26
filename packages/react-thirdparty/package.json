@@ -1,6 +1,6 @@
 {
   "name": "@nanlabs/react-thirdparty",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "./index.tsx",
   "types": "./index.tsx",
   "license": "MIT",
