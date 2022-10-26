@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren, useState } from "react";
 import { ComponentMeta } from "@storybook/react";
-import { useUnmount } from '@nancy/react-hooks';
+import { useUnmount } from "@nancy/react-hooks";
 
 const SimpleRowExample: FC<PropsWithChildren> = (props) => {
   const style = {
@@ -14,28 +14,30 @@ const SimpleRowExample: FC<PropsWithChildren> = (props) => {
 };
 
 const ExampleUnmount: FC = () => {
-    useUnmount(() => {
-        alert('The component is going to be unmounted');
-    })
+  useUnmount(() => {
+    alert("The component is going to be unmounted");
+  });
 
-    return (
-        <SimpleRowExample>
-            <h1>This component will be unmounted if you click on <strong>Unmount</strong></h1>
-        </SimpleRowExample>
-    );
+  return (
+    <SimpleRowExample>
+      <h1>
+        This component will be unmounted if you click on{" "}
+        <strong>Unmount</strong>
+      </h1>
+    </SimpleRowExample>
+  );
 };
 
-
 export const Example: FC = () => {
-    const [exampleMounted, setExampleMounted] = useState(true);
+  const [exampleMounted, setExampleMounted] = useState(true);
 
   return (
     <div>
-        {exampleMounted && <ExampleUnmount />}
+      {exampleMounted && <ExampleUnmount />}
       <SimpleRowExample>
-        <button onClick={() => setExampleMounted((prevState) => !prevState)}>{
-            exampleMounted ? "Unmount" : "Mount"
-        }</button>
+        <button onClick={() => setExampleMounted((prevState) => !prevState)}>
+          {exampleMounted ? "Unmount" : "Mount"}
+        </button>
       </SimpleRowExample>
     </div>
   );

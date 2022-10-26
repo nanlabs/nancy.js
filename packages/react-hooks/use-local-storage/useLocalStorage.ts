@@ -8,7 +8,10 @@ import { Dispatch, SetStateAction, useState, useEffect } from "react";
  *
  * @param key - Key to use in local storage to store value
  */
-const useLocalStorage = <T>(key: string, initialValue: T | (() => T)): [T, Dispatch<SetStateAction<T>>] => {
+const useLocalStorage = <T>(
+  key: string,
+  initialValue: T | (() => T)
+): [T, Dispatch<SetStateAction<T>>] => {
   const readValue = () => {
     // Prevent build error "window is undefined" but keep keep working
     if (typeof window === "undefined") {
