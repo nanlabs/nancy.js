@@ -1,5 +1,11 @@
 # @nancy/thirdparty
 
+## 0.2.1
+
+### Patch Changes
+
+- 46bac22: Testing automated releases
+
 ## 0.2.0
 
 ### Minor Changes
