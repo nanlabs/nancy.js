@@ -1,6 +1,13 @@
-import React, { CSSProperties, FC, forwardRef, PropsWithChildren, Ref, useRef } from 'react';
-import { useIntersectionObserver } from '@nanlabs/react-hooks';
-import { ComponentMeta } from '@storybook/react';
+import React, {
+  CSSProperties,
+  FC,
+  forwardRef,
+  PropsWithChildren,
+  Ref,
+  useRef,
+} from "react";
+import { useIntersectionObserver } from "@nanlabs/react-hooks";
+import { ComponentMeta } from "@storybook/react";
 
 const FixedRowExample: FC<PropsWithChildren> = (props) => {
   const style = {
@@ -28,17 +35,21 @@ const Box = forwardRef((props: PropsWithChildren, ref: Ref<HTMLDivElement>) => {
     border: "2px solid gray",
   };
 
-  return <div ref={ref} style={style}>{props.children}</div>;
+  return (
+    <div ref={ref} style={style}>
+      {props.children}
+    </div>
+  );
 });
 
 Box.displayName = "Box";
 
-export const Example= () => {
+export const Example = () => {
   const intersectionRef = useRef<HTMLDivElement | null>(null);
   const intersection = useIntersectionObserver(intersectionRef, {
     threshold: 1,
     root: null,
-    rootMargin: '0px',
+    rootMargin: "0px",
   });
 
   const style = {
@@ -49,23 +60,21 @@ export const Example= () => {
   } as CSSProperties;
 
   return (
-      <div style={style}>
-        <FixedRowExample>
-          {
-            intersection && intersection.isIntersecting
-            ? <p>Component in viewport</p>
-            : <p>
-                Scroll to find the component
-              </p>
-          }
-        </FixedRowExample>
-        <div style={{ height: "100vh", width: "100%" }}/>
-        <Box ref={intersectionRef} />
-      </div>
+    <div style={style}>
+      <FixedRowExample>
+        {intersection && intersection.isIntersecting ? (
+          <p>Component in viewport</p>
+        ) : (
+          <p>Scroll to find the component</p>
+        )}
+      </FixedRowExample>
+      <div style={{ height: "100vh", width: "100%" }} />
+      <Box ref={intersectionRef} />
+    </div>
   );
 };
 
 export default {
-    title: "Hooks/useIntersectionObserver",
-    component: Example,
+  title: "Hooks/useIntersectionObserver",
+  component: Example,
 } as ComponentMeta<typeof Example>;
