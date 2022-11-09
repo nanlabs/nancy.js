@@ -29,7 +29,6 @@ const Template: ComponentStory<typeof Image> = (args) => <Image {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  initialSrc: "https://picsum.photos/300",
   src: "https://files.worldwildlife.org/wwfcmsprod/images/Panda_in_Tree/hero_small/99i33zyc0l_Large_WW170579.jpg",
   fallback: ["https://picsum.photos/300", "https://picsum.photos/200"],
   maxRetry: 3,
