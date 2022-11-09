@@ -9,10 +9,7 @@ export default {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
     initialSrc: "https://picsum.photos/300",
     src: "https://files.worldwildlife.org/wwfcmsprod/images/Panda_in_Tree/hero_small/99i33zyc0l_Large_WW170579.jpg",
-    fallback: [
-      "https://picsum.photos/300",
-      "https://picsum.photos/200",
-    ],
+    fallback: ["https://picsum.photos/300", "https://picsum.photos/200"],
     delay: 1000,
     maxRetry: 3,
     retryDelay: 1000,
@@ -34,10 +31,7 @@ export const Default = Template.bind({});
 Default.args = {
   initialSrc: "https://picsum.photos/300",
   src: "https://files.worldwildlife.org/wwfcmsprod/images/Panda_in_Tree/hero_small/99i33zyc0l_Large_WW170579.jpg",
-  fallback: [
-    "https://picsum.photos/300",
-    "https://picsum.photos/200",
-  ],
+  fallback: ["https://picsum.photos/300", "https://picsum.photos/200"],
   maxRetry: 3,
   retryDelay: 1000,
   decoding: "async",
