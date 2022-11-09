@@ -19,7 +19,7 @@ export default {
     onLoad: () => console.log("onLoad"),
     style: {
       width: "300px",
-      height: "300px",
+      objectFit: "cover",
     },
     initialTimeout: 1000,
   },
@@ -39,7 +39,7 @@ Default.args = {
   onLoad: () => console.log("onLoad"),
   style: {
     width: "300px",
-    height: "300px",
+    objectFit: "cover",
   },
   initialTimeout: 1000,
 };
