@@ -2,7 +2,7 @@
   "name": "@nanlabs/react-hooks",
   "version": "0.3.0",
   "main": "./index.ts",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./index.ts",
   "license": "MIT",
   "publishConfig": {
@@ -17,7 +17,7 @@
   "scripts": {
     "lint": "eslint **/*.ts*",
     "lint:fix": "eslint **/*.ts* --fix",
-    "build": "tsup index.ts --dts --external react",
+    "build": "tsup index.ts --format esm,cjs --dts --external react",
     "dev": "tsup index.ts --format esm,cjs --watch --dts --external react"
   },
   "devDependencies": {

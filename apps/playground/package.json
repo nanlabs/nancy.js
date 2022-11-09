@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
+    "@nanlabs/eslint-config-react": "*",
     "@storybook/addon-actions": "^6.5.12",
     "@storybook/addon-essentials": "^6.5.12",
     "@storybook/addon-interactions": "^6.5.12",
@@ -28,7 +29,6 @@
     "@types/react": "18.0.17",
     "babel-loader": "^8.2.5",
     "eslint": "7.32.0",
-    "@nanlabs/eslint-config-react": "*",
     "tsconfig": "*",
     "typescript": "^4.5.3"
   }
