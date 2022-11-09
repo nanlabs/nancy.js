@@ -7,8 +7,9 @@
     "index.js"
   ],
   "dependencies": {
+    "@nanlabs/eslint-config-ts": "*",
     "eslint": "^7.23.0",
-    "@nanlabs/eslint-config-ts": "*"
+    "eslint-config-react-hooks": "^1.0.0"
   },
   "devDependencies": {
     "typescript": "^4.7.4"

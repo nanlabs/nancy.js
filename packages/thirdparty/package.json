@@ -15,6 +15,7 @@
   },
   "scripts": {
     "lint": "eslint **/*.ts*",
+    "lint:fix": "eslint **/*.ts* --fix",
     "build": "tsup index.ts --format esm,cjs --dts",
     "dev": "tsup index.ts --format esm,cjs --watch --dts"
   },

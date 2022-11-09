@@ -15,6 +15,7 @@
   },
   "scripts": {
     "lint": "eslint **/*.ts*",
+    "lint:fix": "eslint **/*.ts* --fix",
     "build": "tsup index.tsx --format esm,cjs --dts --external react",
     "dev": "tsup index.tsx --format esm,cjs --watch --dts --external react"
   },
