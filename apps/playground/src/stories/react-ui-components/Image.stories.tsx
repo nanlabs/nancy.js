@@ -3,7 +3,7 @@ import { Image } from "@nanlabs/react-lib-ui";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 export default {
-  title: "Components/Image",
+  title: "React Components/Image",
   component: Image,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout

@@ -75,6 +75,6 @@ export const Example = () => {
 };
 
 export default {
-  title: "Hooks/useIntersectionObserver",
+  title: "React Hooks/useIntersectionObserver",
   component: Example,
 } as ComponentMeta<typeof Example>;

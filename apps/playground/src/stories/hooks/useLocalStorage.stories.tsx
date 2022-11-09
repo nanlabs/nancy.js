@@ -80,6 +80,6 @@ export const Example: FC = () => {
 };
 
 export default {
-  title: "Hooks/useLocalStorage",
+  title: "React Hooks/useLocalStorage",
   component: Example,
 } as ComponentMeta<typeof Example>;

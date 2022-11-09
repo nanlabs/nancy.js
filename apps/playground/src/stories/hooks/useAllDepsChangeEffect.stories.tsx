@@ -56,6 +56,6 @@ export const Example: FC = () => {
 };
 
 export default {
-  title: "Hooks/useAllDepsChangeEffect",
+  title: "React Hooks/useAllDepsChangeEffect",
   component: Example,
 } as ComponentMeta<typeof Example>;

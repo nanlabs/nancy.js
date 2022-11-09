@@ -44,6 +44,6 @@ export const Example: FC = () => {
 };
 
 export default {
-  title: "Hooks/useUnmount",
+  title: "React Hooks/useUnmount",
   component: Example,
 } as ComponentMeta<typeof Example>;
