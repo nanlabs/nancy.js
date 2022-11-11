@@ -1,6 +1,6 @@
 {
   "name": "@nanlabs/fp",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "main": "./index.ts",
   "types": "./index.ts",
   "license": "MIT",
