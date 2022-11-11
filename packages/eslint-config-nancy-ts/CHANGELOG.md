@@ -1,5 +1,13 @@
 # eslint-config-nancy-ts
 
+## 0.3.1
+
+### Patch Changes
+
+- bd19692: Added FP, UI examples and more!
+- Updated dependencies [bd19692]
+  - @nanlabs/eslint-config@0.3.1
+
 ## 0.3.0
 
 ### Minor Changes

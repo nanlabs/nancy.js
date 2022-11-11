@@ -1,5 +1,17 @@
 # @nanlabs/playground
 
+## 0.3.0
+
+### Minor Changes
+
+- bd19692: Added FP, UI examples and more!
+
+### Patch Changes
+
+- Updated dependencies [bd19692]
+  - @nanlabs/react-hooks@0.4.0
+  - @nanlabs/react-lib-ui@0.4.0
+
 ## 0.2.0
 
 ### Minor Changes
