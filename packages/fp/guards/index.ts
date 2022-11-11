@@ -52,11 +52,19 @@ export const getDebugEnabled = (): boolean => !isFalsy(process.env.DEBUG);
  * const failedKeys = getFailedKeysForTypeguard(obj, ruleSet);
  * // failedKeys = ['age']
  */
-export const getFailedKeysForTypeguard = <T extends object>(
+export const getFailedKeysForTypeguard = <T extends Record<string | number | symbol, unknown>>(
   obj: T,
   ruleSet: RuleSet
-): (keyof T)[] =>
-  objectKeys(ruleSet).filter((key) => !ruleSet[key](obj[key])) as (keyof T)[];
+): string[] =>
+  Object.keys(ruleSet).reduce((acc, key) => {
+    const rule = ruleSet[key];
+    const value = obj[key];
+    const passed = rule(value);
+    if (!passed) {
+      acc.push(String(key));
+    }
+    return acc;
+  }, [] as string[]);
 
 /**
  * getInvalidKeysForTypeguard is a function that returns the keys that failed the typeguard
@@ -120,7 +128,7 @@ export const getInvalidKeysForTypeguard = <T extends object>(
  * const isPerson = isType(obj, ruleSet);
  * // isPerson = false
  */
-export const isType = <T>(
+export const isType = <T extends Record<string | number | symbol, unknown>>(
   obj: T,
   ruleSet: RuleSet,
   strict = false
