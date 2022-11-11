@@ -1,5 +1,11 @@
 # tsconfig
 
+## 0.2.2
+
+### Patch Changes
+
+- bd19692: Added FP, UI examples and more!
+
 ## 0.2.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @nanlabs/react-lib-ui
 
+## 0.4.0
+
+### Minor Changes
+
+- bd19692: Added FP, UI examples and more!
+
 ## 0.3.0
 
 ### Minor Changes
