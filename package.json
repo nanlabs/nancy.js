@@ -6,16 +6,30 @@
     "packages/*"
   ],
   "scripts": {
+    "prepare": "is-ci || husky install",
+    "lint-staged": "lint-staged",
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\" && turbo run lint:fix",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "publish-packages": "turbo run build lint && changeset version && changeset publish"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "npm run lint:fix"
+    ],
+    "*.{json,css,sass,scss,less,html,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
     "@changesets/cli": "^2.25.0",
+    "husky": "^8.0.2",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "turbo": "^1.5.5"
   },
