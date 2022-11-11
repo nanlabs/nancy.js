@@ -52,7 +52,9 @@ export const getDebugEnabled = (): boolean => !isFalsy(process.env.DEBUG);
  * const failedKeys = getFailedKeysForTypeguard(obj, ruleSet);
  * // failedKeys = ['age']
  */
-export const getFailedKeysForTypeguard = <T extends Record<string | number | symbol, unknown>>(
+export const getFailedKeysForTypeguard = <
+  T extends Record<string | number | symbol, unknown>
+>(
   obj: T,
   ruleSet: RuleSet
 ): string[] =>
