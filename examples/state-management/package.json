@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "start": "concurrently \"wsrun --parallel dev\"",
     "clean": "npm run clean:projects && npm run clean:top",
