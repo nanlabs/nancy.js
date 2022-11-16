@@ -63,11 +63,6 @@ Collection of boilerplates for different use cases.
 The following examples show how to solve the same problem using different approaches from
 normal React hooks to State management libraries. Check the full list with more details in the [state management examples](./state-management/) directory.
 
-## Node Package Managers
-
-The following examples are intended to show different alternatives that exist for package management in Node.
-You can see the following examples here [node package managers](./node-package-managers/).
-
 ### Basic Example
 
 - [Prop Drilling](./state-management/examples/hooks-prop-drilling/)
@@ -113,6 +108,11 @@ You can see the following examples here [node package managers](./node-package-m
 - [Valtio](./state-management/examples/bidirectional-valtio/)
 - [MobX State Tree](./state-management/examples/bidirectional-mobx-state-tree/)
 - [React Easy State](./state-management/examples/bidirectional-easy-state/)
+
+## Node Package Managers
+
+The following examples are intended to show different alternatives that exist for package management in Node.
+You can see the following examples here [node package managers](./node-package-managers/).
 
 ## Contributing
 
