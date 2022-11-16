@@ -40,6 +40,8 @@ For more installation instructions you can read the installation guide found at:
 
 ## Installation times / Benchmarks
 
+The installation times shown below were obtained after making small repositories of our own. You can see them in this repository, inside the [examples](./examples/) folder.
+
 Time it takes to install Chakra-UI:
 
 - NPM: 5.15s user 2.02s system 31% cpu 22.981 total
