@@ -33,6 +33,7 @@ here at [NaN Labs](https://www.nanlabs.com/).
   - [Atomic State Management](#atomic-state-management)
   - [Unidirectional State Management](#unidirectional-state-management)
   - [Bidirectional State Management](#bidirectional-state-management)
+- [Node Package Managers](#node-package-managers)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
 
@@ -61,6 +62,11 @@ Collection of boilerplates for different use cases.
 
 The following examples show how to solve the same problem using different approaches from
 normal React hooks to State management libraries. Check the full list with more details in the [state management examples](./state-management/) directory.
+
+## Node Package Managers
+
+The following examples are intended to show different alternatives that exist for package management in Node.
+You can see the following examples here [node package managers](./node-package-managers/).
 
 ### Basic Example
 
