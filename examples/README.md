@@ -23,6 +23,7 @@
 This repository contains different React components, hooks, apps and libraries that are used in different projects
 here at [NaN Labs](https://www.nanlabs.com/).
 
+- [Node Package Managers](#node-package-managers)
 - [Boilerplates](#boilerplates)
 - [State Management examples](#state-management-examples)
   - [Basic Example](#basic-example)
@@ -33,10 +34,15 @@ here at [NaN Labs](https://www.nanlabs.com/).
   - [Atomic State Management](#atomic-state-management)
   - [Unidirectional State Management](#unidirectional-state-management)
   - [Bidirectional State Management](#bidirectional-state-management)
-- [Node Package Managers](#node-package-managers)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
 
+
+
+## Node Package Managers
+
+The following examples are intended to show different alternatives that exist for package management in Node.
+You can see the following examples here [node package managers](./node-package-managers/).
 ## Boilerplates
 
 Collection of boilerplates for different use cases.
@@ -108,11 +114,6 @@ normal React hooks to State management libraries. Check the full list with more 
 - [Valtio](./state-management/examples/bidirectional-valtio/)
 - [MobX State Tree](./state-management/examples/bidirectional-mobx-state-tree/)
 - [React Easy State](./state-management/examples/bidirectional-easy-state/)
-
-## Node Package Managers
-
-The following examples are intended to show different alternatives that exist for package management in Node.
-You can see the following examples here [node package managers](./node-package-managers/).
 
 ## Contributing
 

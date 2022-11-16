@@ -1,6 +1,6 @@
 ![Logo](https://pnpm.io/fr/img/pnpm-no-name-with-frame.svg)
 
-# PNPM POC
+# Node Package Managers Comparison
 
 The purpose of this repository is to investigate the advantages and disadvantages of using PNPM as a package manager.
 
@@ -33,7 +33,7 @@ By default, pnpm uses symlinks to add only the direct dependencies of the projec
 Install pnmpm with npm
 
 ```bash
-  npm install -g pnpm
+npm install -g pnpm
 ```
 
 For more installation instructions you can read the installation guide found at: : _https://pnpm.io/es/installation_
@@ -83,7 +83,7 @@ pnpm supports a rich selector syntax for picking packages by name or by relation
 Selectors may be specified via the --filter (or -F) flag:
 
 ```bash
-  pnpm --filter <package_selector> <command>
+pnpm --filter <package_selector> <command>
 ```
 
 To learn how to use the filter function, see the following link: _https://pnpm.io/filtering_
@@ -99,7 +99,3 @@ Here are a few of the most popular open source projects that use the workspace f
 ![workspaces](./images/pnpm-workspaces-examples.png)
 
 To learn more about the implementation of workspaces, you can see the following link: _https://pnpm.io/workspaces_
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
