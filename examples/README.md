@@ -37,12 +37,11 @@ here at [NaN Labs](https://www.nanlabs.com/).
 - [Contributing](#contributing)
 - [Contributors](#contributors)
 
-
-
 ## Node Package Managers
 
 The following examples are intended to show different alternatives that exist for package management in Node.
 You can see the following examples here [node package managers](./node-package-managers/).
+
 ## Boilerplates
 
 Collection of boilerplates for different use cases.
