@@ -1,7 +1,7 @@
-export {
-  type ImageDecoding,
-  type ImageLoading,
-  type UseImageRequest,
-  type UseImageResponse,
-  default as useImage,
+export { default as useImage } from "./useImage";
+export type {
+  ImageDecoding,
+  ImageLoading,
+  UseImageRequest,
+  UseImageResponse,
 } from "./useImage";
