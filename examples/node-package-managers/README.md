@@ -1,6 +1,15 @@
-![Logo](https://pnpm.io/fr/img/pnpm-no-name-with-frame.svg)
+<div align="center">
+<p>
+    <img
+        style="width: 200px"
+        width="200"
+        src="https://pnpm.io/fr/img/pnpm-no-name-with-frame.svg"
+    >
+</p>
+<h1>Node Package Managers Comparison</h1>
 
-# Node Package Managers Comparison
+</div>
+<div align="center">
 
 The purpose of this repository is to investigate the advantages and disadvantages of using PNPM as a package manager.
 
