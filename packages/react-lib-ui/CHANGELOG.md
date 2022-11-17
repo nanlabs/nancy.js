@@ -1,5 +1,11 @@
 # @nanlabs/react-lib-ui
 
+## 0.4.1
+
+### Patch Changes
+
+- c1eee3f: Updated typed props
+
 ## 0.4.0
 
 ### Minor Changes
