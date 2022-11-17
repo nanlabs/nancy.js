@@ -9,7 +9,6 @@
 <h1>Node Package Managers Comparison</h1>
 
 </div>
-<div align="center">
 
 The purpose of this repository is to investigate the advantages and disadvantages of using PNPM as a package manager.
 
