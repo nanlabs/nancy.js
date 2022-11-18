@@ -34,6 +34,7 @@ here at [NaN Labs](https://www.nanlabs.com/).
   - [Atomic State Management](#atomic-state-management)
   - [Unidirectional State Management](#unidirectional-state-management)
   - [Bidirectional State Management](#bidirectional-state-management)
+  - [Other related examples](#other-related-examples)
 - [Contributing](#contributing)
 - [Contributors](#contributors)
 
@@ -113,6 +114,15 @@ normal React hooks to State management libraries. Check the full list with more 
 - [Valtio](./state-management/examples/bidirectional-valtio/)
 - [MobX State Tree](./state-management/examples/bidirectional-mobx-state-tree/)
 - [React Easy State](./state-management/examples/bidirectional-easy-state/)
+
+### Other related examples
+
+> **Note**: These examples are not part of this repository, but they are related
+> and part of the same GitHub organization.
+
+- [AWS AppSync + TypeScript](https://github.com/nanlabs/infra-reference/tree/main/examples/serverless/serverless-appsync-nodejs/) - Serverless Framework example to deploy an AWS AppSync API using TypeScript. It also has a local development environment using [Serverless Offline](https://www.serverless.com/plugins/serverless-offline).
+- [Serverless Middy](https://github.com/nanlabs/infra-reference/tree/main/examples/serverless/serverless-middy/) - Serverless Framework example to deploy a lambda function using [Middy](https://middy.js.org/), the stylish Node.js middleware engine for AWS Lambda.
+- [Serverless Middy with Custom Middleware](https://github.com/nanlabs/infra-reference/tree/main/examples/serverless/serverless-middy-custom-middleware/) - Serverless Framework example to deploy a lambda function using [Middy](https://middy.js.org/), the stylish Node.js middleware engine for AWS Lambda.
 
 ## Contributing
 
