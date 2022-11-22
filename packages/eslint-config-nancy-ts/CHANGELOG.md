@@ -1,5 +1,11 @@
 # eslint-config-nancy-ts
 
+## 0.4.0
+
+### Minor Changes
+
+- 87bf822: This is a test
+
 ## 0.3.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # tsconfig
 
+## 0.2.3
+
+### Patch Changes
+
+- 87bf822: This is a test
+
 ## 0.2.2
 
 ### Patch Changes
