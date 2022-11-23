@@ -120,9 +120,9 @@ normal React hooks to State management libraries. Check the full list with more 
 > **Note**: These examples are not part of this repository, but they are related
 > and part of the same GitHub organization.
 
-- [AWS AppSync + TypeScript](https://github.com/nanlabs/infra-reference/tree/main/examples/serverless/serverless-appsync-nodejs/) - Serverless Framework example to deploy an AWS AppSync API using TypeScript. It also has a local development environment using [Serverless Offline](https://www.serverless.com/plugins/serverless-offline).
-- [Serverless Middy](https://github.com/nanlabs/infra-reference/tree/main/examples/serverless/serverless-middy/) - Serverless Framework example to deploy a lambda function using [Middy](https://middy.js.org/), the stylish Node.js middleware engine for AWS Lambda.
-- [Serverless Middy with Custom Middleware](https://github.com/nanlabs/infra-reference/tree/main/examples/serverless/serverless-middy-custom-middleware/) - Serverless Framework example to deploy a lambda function using [Middy](https://middy.js.org/), the stylish Node.js middleware engine for AWS Lambda.
+- [AWS AppSync + TypeScript](https://github.com/nanlabs/devops-reference/tree/main/examples/serverless/serverless-appsync-nodejs/) - Serverless Framework example to deploy an AWS AppSync API using TypeScript. It also has a local development environment using [Serverless Offline](https://www.serverless.com/plugins/serverless-offline).
+- [Serverless Middy](https://github.com/nanlabs/devops-reference/tree/main/examples/serverless/serverless-middy/) - Serverless Framework example to deploy a lambda function using [Middy](https://middy.js.org/), the stylish Node.js middleware engine for AWS Lambda.
+- [Serverless Middy with Custom Middleware](https://github.com/nanlabs/devops-reference/tree/main/examples/serverless/serverless-middy-custom-middleware/) - Serverless Framework example to deploy a lambda function using [Middy](https://middy.js.org/), the stylish Node.js middleware engine for AWS Lambda.
 
 ## Contributing
 
