@@ -1,5 +1,11 @@
 # eslint-config-nancy-ts
 
+## 0.5.0
+
+### Minor Changes
+
+- 534cc3c: This is a testing release
+
 ## 0.4.0
 
 ### Minor Changes
