@@ -1,5 +1,11 @@
 # tsconfig
 
+## 0.2.4
+
+### Patch Changes
+
+- 534cc3c: This is a testing release
+
 ## 0.2.3
 
 ### Patch Changes
