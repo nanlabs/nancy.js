@@ -1,5 +1,11 @@
 # @nanlabs/react-lib-ui
 
+## 0.4.2
+
+### Patch Changes
+
+- 1759bc0: This is a testing release
+
 ## 0.4.1
 
 ### Patch Changes

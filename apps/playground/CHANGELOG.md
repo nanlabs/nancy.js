@@ -1,5 +1,16 @@
 # @nanlabs/playground
 
+## 0.4.0
+
+### Minor Changes
+
+- 1759bc0: This is a testing release
+
+### Patch Changes
+
+- Updated dependencies [1759bc0]
+  - @nanlabs/react-lib-ui@0.4.2
+
 ## 0.3.0
 
 ### Minor Changes
