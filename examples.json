@@ -1,0 +1,253 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nanlabs/awesome-nan/main/examples.schema.json",
+  "list": [
+    {
+      "name": "Storybook Playground",
+      "description": "This app was created with the goal to have examples of ours React components, hooks and libraries that are created in different packages in the repository Nancy.js.",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/apps/playground/",
+      "tags": ["Applications"],
+      "labels": [
+        "React",
+        "Storybook",
+        "Nancy.js"
+      ]
+    },
+    {
+      "name": "Node Package Managers",
+      "description": "Comparison of the most popular Node Package Managers: npm, yarn, pnpm.",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/node-package-managers/",
+      "tags": ["Examples > DevOps > Node Package Managers"],
+      "labels": [
+        "Node",
+        "npm",
+        "yarn",
+        "pnpm"
+      ]
+    },
+    {
+      "name": "React Webpack Boilerplate",
+      "description": "A simple boilerplate to start a React project with Webpack. Boilerplate generated using [create-react-webpack-project](https://www.npmjs.com/package/create-react-webpack-project) contains full CI/CD setup with GitHub Actions and Docker. It also contains a full local development setup with hot reload and production ready setup with minification and optimization. It also contains a full test setup with Jest and React Testing Library.",
+      "url": "https://github.com/nanlabs/react-webpack-boilerplate",
+      "tags": ["Applications"],
+      "labels": [
+        "React",
+        "Webpack"
+      ]
+    },
+    {
+      "name": "Prop Drilling",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/hooks-prop-drilling/",
+      "description": "This example shows how to pass data from a parent component to a child component using props.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React"
+      ]
+    },
+    {
+      "name": "Context",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/hooks-context/",
+      "description": "This example shows how to use React Context to share data between components.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React"
+      ]
+    },
+    {
+      "name": "Global State",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/hooks-global-state/",
+      "description": "This example shows how to use a global state using React Hooks.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React"
+      ]
+    },
+    {
+      "name": "Hookstate",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/hooks-hookstate/",
+      "description": "This example shows how to use Hookstate to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React"
+      ]
+    },
+    {
+      "name": "Teaful",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/hooks-teaful/",
+      "description": "This example shows how to use Teaful to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React"
+      ]
+    },
+    {
+      "name": "XState",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/fsm-xstate/",
+      "description": "This example shows how to use XState to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "XState"
+      ]
+    },
+    {
+      "name": "React Query",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/api-react-query/",
+      "description": "This example shows how to use React Query to fetch data from an API.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "React Query"
+      ]
+    },
+    {
+      "name": "Effector",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/reactive-effector/",
+      "description": "This example shows how to use Effector to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "Effector"
+      ]
+    },
+    {
+      "name": "Akita",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/reactive-akita/",
+      "description": "This example shows how to use Akita to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "Akita"
+      ]
+    },
+    {
+      "name": "Rxjs",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/reactive-rxjs/",
+      "description": "This example shows how to use Rxjs to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "Rxjs"
+      ]
+    },
+    {
+      "name": "Storeon",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/reactive-storeon/",
+      "description": "This example shows how to use Storeon to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "Storeon"
+      ]
+    },
+    {
+      "name": "Jotai",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/atomic-jotai/",
+      "description": "This example shows how to use Jotai to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "Jotai"
+      ]
+    },
+    {
+      "name": "Recoil",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/atomic-recoil/",
+      "description": "This example shows how to use Recoil to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "Recoil"
+      ]
+    },
+    {
+      "name": "AgileTs",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/atomic-agilets/",
+      "description": "This example shows how to use AgileTs to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "AgileTs"
+      ]
+    },
+    {
+      "name": "Zustand",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/unidirectional-zustand/",
+      "description": "This example shows how to use Zustand to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "Zustand"
+      ]
+    },
+    {
+      "name": "Redux Toolkit",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/unidirectional-redux-toolkit/",
+      "description": "This example shows how to use Redux Toolkit to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "Redux Toolkit"
+      ]
+    },
+    {
+      "name": "Rematch",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/unidirectional-rematch/",
+      "description": "This example shows how to use Rematch to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "Rematch"
+      ]
+    },
+    {
+      "name": "Unistore",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/unidirectional-unistore/",
+      "description": "This example shows how to use Unistore to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "Unistore"
+      ]
+    },
+    {
+      "name": "MobX",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/bidirectional-mobx/",
+      "description": "This example shows how to use MobX to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "MobX"
+      ]
+    },
+    {
+      "name": "Valtio",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/bidirectional-valtio/",
+      "description": "This example shows how to use Valtio to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "Valtio"
+      ]
+    },
+    {
+      "name": "MobX State Tree",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/bidirectional-mobx-state-tree/",
+      "description": "This example shows how to use MobX State Tree to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "MobX State Tree"
+      ]
+    },
+    {
+      "name": "React Easy State",
+      "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/bidirectional-easy-state/",
+      "description": "This example shows how to use React Easy State to manage state.",
+      "tags": ["Examples > Frontend > React State Management"],
+      "labels": [
+        "React",
+        "React Easy State"
+      ]
+    }
+  ]
+}
