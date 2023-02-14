@@ -10,6 +10,7 @@
     "lint-staged": "lint-staged",
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
+    "storybook": "turbo run storybook --parallel",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",

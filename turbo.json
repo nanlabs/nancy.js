@@ -12,6 +12,10 @@
     "lint:fix": {
       "outputs": []
     },
+    "storybook": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
     "dev": {
       "cache": false
     }
