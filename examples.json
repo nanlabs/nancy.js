@@ -26,7 +26,7 @@
     },
     {
       "name": "React Webpack Boilerplate",
-      "description": "A simple boilerplate to start a React project with Webpack. Boilerplate generated using [create-react-webpack-project](https://www.npmjs.com/package/create-react-webpack-project) contains full CI/CD setup with GitHub Actions and Docker. It also contains a full local development setup with hot reload and production ready setup with minification and optimization. It also contains a full test setup with Jest and React Testing Library.",
+      "description": "A simple but powerful boilerplate to start a React project powered by Vite. Boilerplate generated using [create-react-webpack-project](https://www.npmjs.com/package/create-react-webpack-project) contains full CI/CD setup with GitHub Actions and Docker. It also contains a full local development setup with hot reload and production ready setup with minification and optimization. It also contains a full test setup with Jest and React Testing Library.",
       "url": "https://github.com/nanlabs/react-webpack-boilerplate",
       "tags": ["Applications"],
       "labels": [
