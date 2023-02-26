@@ -1,5 +1,13 @@
 # eslint-config-nancy-react
 
+## 0.3.3
+
+### Patch Changes
+
+- 6d9eeaa: New release
+- Updated dependencies [6d9eeaa]
+  - @nanlabs/eslint-config-ts@0.5.1
+
 ## 0.3.2
 
 ### Patch Changes
