@@ -1,5 +1,11 @@
 # @nanlabs/react-thirdparty
 
+## 0.3.2
+
+### Patch Changes
+
+- 6d9eeaa: New release
+
 ## 0.3.1
 
 ### Patch Changes

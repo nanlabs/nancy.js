@@ -1,5 +1,14 @@
 # @nanlabs/playground
 
+## 0.3.1
+
+### Patch Changes
+
+- 6d9eeaa: New release
+- Updated dependencies [6d9eeaa]
+  - @nanlabs/react-hooks@0.4.2
+  - @nanlabs/react-lib-ui@0.4.2
+
 ## 0.3.0
 
 ### Minor Changes

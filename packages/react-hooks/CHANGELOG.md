@@ -1,5 +1,11 @@
 # @nanlabs/react-hooks
 
+## 0.4.2
+
+### Patch Changes
+
+- 6d9eeaa: New release
+
 ## 0.4.1
 
 ### Patch Changes
