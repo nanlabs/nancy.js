@@ -41,6 +41,7 @@ We also provide reusable JavaScript and TypeScript packages.
 
 - [React Boilerplate](https://github.com/nanlabs/react-boilerplate) - A simple but powerful boilerplate to start a React project powered by Vite. Boilerplate generated using [create-react-webpack-project](https://www.npmjs.com/package/create-react-webpack-project) contains full CI/CD setup with GitHub Actions and Docker. It also contains a full local development setup with hot reload and production ready setup with minification and optimization. It also contains a full test setup with Jest and React Testing Library. _Keywords: React_
 - [Storybook Playground](https://github.com/nanlabs/nancy.js/tree/main/apps/playground/) - This app was created with the goal to have examples of ours React components, hooks and libraries that are created in different packages in the repository Nancy.js. _Keywords: React, Storybook, Nancy.js_
+- [TypeScript Monorepo Boilerplate](https://github.com/nanlabs/ts-monorepo-boilerplate) - A simple but powerful boilerplate to start a TypeScript monorepo project powered Turborepo. _Keywords: TypeScript, Turborepo, Monorepo, Boilerplate, React, NPM Workspaces, Changesets, ESLint, Prettier, Jest, Nest.js, Storybook_
 
 ## Examples
 
