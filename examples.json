@@ -34,6 +34,26 @@
       ]
     },
     {
+      "name": "TypeScript Monorepo Boilerplate",
+      "description": "A simple but powerful boilerplate to start a TypeScript monorepo project powered Turborepo.",
+      "url": "https://github.com/nanlabs/ts-monorepo-boilerplate",
+      "tags": ["Applications"],
+      "labels": [
+        "TypeScript",
+        "Turborepo",
+        "Monorepo",
+        "Boilerplate",
+        "React",
+        "NPM Workspaces",
+        "Changesets",
+        "ESLint",
+        "Prettier",
+        "Jest",
+        "Nest.js",
+        "Storybook"
+      ]
+    },
+    {
       "name": "Prop Drilling",
       "url": "https://github.com/nanlabs/nancy.js/tree/main/examples/state-management/examples/hooks-prop-drilling/",
       "description": "This example shows how to pass data from a parent component to a child component using props.",
