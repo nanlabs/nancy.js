@@ -12,7 +12,7 @@
 
 The purpose of this repository is to investigate the advantages and disadvantages of using PNPM as a package manager.
 
-All documentation written below is based on existing documentation on _https://pnpm.io/_ and other websites.
+All documentation written below is based on existing documentation on _<https://pnpm.io/>_ and other websites.
 
 ## Why use pnpm?
 
@@ -23,8 +23,8 @@ All documentation written below is based on existing documentation on _https://p
 
 You can read more about the motivations to use pnpm here:
 
-- _https://pnpm.io/motivation_
-- _https://medium.com/pnpm/why-should-we-use-pnpm-75ca4bfe7d93#:~:text=pnpm%20is%20not%20only%20faster,them%20from%20the%20global%20store_
+- _<https://pnpm.io/motivation>_
+- _<https://medium.com/pnpm/why-should-we-use-pnpm-75ca4bfe7d93#:~:text=pnpm%20is%20not%20only%20faster>,them%20from%20the%20global%20store_
 
 ## How does it work?
 
@@ -44,7 +44,7 @@ Install pnmpm with npm
 npm install -g pnpm
 ```
 
-For more installation instructions you can read the installation guide found at: : _https://pnpm.io/es/installation_
+For more installation instructions you can read the installation guide found at: : _<https://pnpm.io/es/installation>_
 
 ## Installation times / Benchmarks
 
@@ -62,9 +62,9 @@ Time it takes to install Express:
 - YARN: 1.36s user 0.51s system 33% cpu 5.544 total
 - PNPM: 0.74s user 0.19s system 39% cpu 2.370 total
 
-For more information about bencharks between pnpm, npm and yarn you can visit the following link: _https://pnpm.io/benchmarks_
+For more information about bencharks between pnpm, npm and yarn you can visit the following link: _<https://pnpm.io/benchmarks>_
 
-For other comparisons with NPM and YARN see the information found here: _https://pnpm.io/feature-comparison_
+For other comparisons with NPM and YARN see the information found here: _<https://pnpm.io/feature-comparison>_
 
 ## Differences in node_modules folder structure
 
@@ -94,7 +94,7 @@ Selectors may be specified via the --filter (or -F) flag:
 pnpm --filter <package_selector> <command>
 ```
 
-To learn how to use the filter function, see the following link: _https://pnpm.io/filtering_
+To learn how to use the filter function, see the following link: _<https://pnpm.io/filtering>_
 
 ## Workspaces
 
@@ -106,4 +106,4 @@ Here are a few of the most popular open source projects that use the workspace f
 
 ![workspaces](./images/pnpm-workspaces-examples.png)
 
-To learn more about the implementation of workspaces, you can see the following link: _https://pnpm.io/workspaces_
+To learn more about the implementation of workspaces, you can see the following link: _<https://pnpm.io/workspaces>_
