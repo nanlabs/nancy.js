@@ -1,5 +1,11 @@
 # @nanlabs/fp
 
+## 0.4.4
+
+### Patch Changes
+
+- 6ec26b3: Removed module file from dist
+
 ## 0.4.3
 
 ### Patch Changes
