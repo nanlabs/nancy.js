@@ -1,6 +1,7 @@
 {
   "name": "@nanlabs/playground",
-  "version": "0.4.1",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
     "lint": "eslint **/*.ts*",
     "lint:fix": "eslint **/*.ts* --fix",
