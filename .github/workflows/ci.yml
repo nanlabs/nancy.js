@@ -1,8 +1,8 @@
 name: Continuous Integration
 
 concurrency:
-   group: ci-${{ github.event.number }}
-   cancel-in-progress: true
+  group: ci-${{ github.event.number }}
+  cancel-in-progress: true
 
 on:
   # Allows you to run this workflow manually from the Actions tab
@@ -24,6 +24,11 @@ jobs:
     if: github.event_name != 'pull_request' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false)
     name: Linter
     uses: ./.github/workflows/lint.yml
+
+  type-check:
+    if: github.event_name != 'pull_request' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false)
+    name: Typecheck
+    uses: ./.github/workflows/type-check.yml
 
   shellcheck:
     if: github.event_name != 'pull_request' || (github.event_name == 'pull_request' && github.event.pull_request.draft == false)

@@ -12,12 +12,12 @@
     "eslint-config-turbo": "^0.0.4"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "scope": "@nanlabs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nanlabs/nancy.js.git",
-    "directory": "packages/eslint-config-nancy"
+    "url": "git+https://github.com/nanlabs/nancy.js.git"
   }
 }

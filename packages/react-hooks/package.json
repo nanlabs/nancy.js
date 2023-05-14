@@ -9,13 +9,13 @@
   ],
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "scope": "@nanlabs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nanlabs/nancy.js.git",
-    "directory": "packages/@nanlabs/react-hooks"
+    "url": "git+https://github.com/nanlabs/nancy.js.git"
   },
   "scripts": {
     "lint": "eslint **/*.ts*",
