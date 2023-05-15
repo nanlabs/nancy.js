@@ -1,5 +1,11 @@
 # @nanlabs/react-hooks
 
+## 0.5.2
+
+### Patch Changes
+
+- Updated npm documentation
+
 ## 0.5.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @nanlabs/thirdparty
 
+## 0.3.6
+
+### Patch Changes
+
+- Updated npm documentation
+
 ## 0.3.5
 
 ### Patch Changes

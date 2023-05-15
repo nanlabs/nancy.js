@@ -1,5 +1,5 @@
 export interface GoogleReCaptchaScriptProps {
-  src: string;
+  src?: string;
   reCaptchaKey: string;
   scriptId: string;
   language?: string;
@@ -15,7 +15,7 @@ export interface GoogleReCaptchaScriptProps {
  * @param {GoogleReCaptchaScriptProps} props - The props for the script tag.
  */
 export const generateGoogleReCaptchaScript = ({
-  src,
+  src = "https://www.google.com/recaptcha/api.js",
   reCaptchaKey,
   scriptId,
   language,
@@ -44,6 +44,7 @@ export const generateGoogleReCaptchaScript = ({
  * @param {GoogleReCaptchaScriptProps} props - The props for the script tag.
  */
 export const injectGoogleReCaptchaScript = ({
+  src = "https://www.google.com/recaptcha/api.js",
   scriptId,
   handleOnLoad = null,
   appendTo,

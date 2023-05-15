@@ -1,5 +1,5 @@
 import React from "react";
-import { Image } from "@nanlabs/react-lib-ui";
+import { Image } from "@nanlabs/react-ui";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 export default {

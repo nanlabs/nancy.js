@@ -1,5 +1,11 @@
 # @nanlabs/fp
 
+## 0.4.6
+
+### Patch Changes
+
+- Updated npm documentation
+
 ## 0.4.5
 
 ### Patch Changes
