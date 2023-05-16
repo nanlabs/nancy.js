@@ -39,10 +39,7 @@ import { Image } from "@nanlabs/react-ui";
 const Component = () => (
   <Image
     src="https://picsum.photos/400"
-    fallback={[
-      "https://picsum.photos/300",
-      "https://picsum.photos/200"
-    ]}
+    fallback={["https://picsum.photos/300", "https://picsum.photos/200"]}
     maxRetry={3}
     retryDelay={1000}
     initialTimeout={1000}

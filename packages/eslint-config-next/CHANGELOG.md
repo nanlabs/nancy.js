@@ -1,5 +1,13 @@
 # @nanlabs/eslint-config-next
 
+## 0.3.6
+
+### Patch Changes
+
+- Updated peer deps
+- Updated dependencies
+  - @nanlabs/eslint-config-ts@0.5.5
+
 ## 0.3.5
 
 ### Patch Changes

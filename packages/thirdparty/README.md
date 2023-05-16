@@ -36,24 +36,24 @@ In the example bellow we use `GoogleReCaptchaProvider` and `useGoogleReCaptcha` 
 You can find more examples in the [documentation][docs].
 
 ```tsx
-import React, { useState } from 'react'
-import { injectGoogleReCaptchaScript } from '@nanlabs/thirdparty'
+import React, { useState } from "react";
+import { injectGoogleReCaptchaScript } from "@nanlabs/thirdparty";
 
 injectGoogleReCaptchaScript({
-  reCaptchaKey: 'YOUR_RECAPTCHA_KEY',
-  scriptId: 'recaptcha-script',
-})
+  reCaptchaKey: "YOUR_RECAPTCHA_KEY",
+  scriptId: "recaptcha-script",
+});
 
 window.onload = () => {
-  const reCaptcha = window.grecaptcha
+  const reCaptcha = window.grecaptcha;
   reCaptcha.ready(() => {
     reCaptcha
-      .execute('YOUR_RECAPTCHA_KEY', { action: 'login_page' })
+      .execute("YOUR_RECAPTCHA_KEY", { action: "login_page" })
       .then((token) => {
         // Do something with the token
-      })
-  })
-}
+      });
+  });
+};
 ```
 
 [docs]: https://nanlabs.github.io/nancy.js/

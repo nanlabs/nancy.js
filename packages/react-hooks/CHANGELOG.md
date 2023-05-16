@@ -1,5 +1,11 @@
 # @nanlabs/react-hooks
 
+## 0.5.3
+
+### Patch Changes
+
+- Updated peer deps
+
 ## 0.5.2
 
 ### Patch Changes

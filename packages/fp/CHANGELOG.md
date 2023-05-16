@@ -1,5 +1,11 @@
 # @nanlabs/fp
 
+## 0.4.7
+
+### Patch Changes
+
+- Updated peer deps
+
 ## 0.4.6
 
 ### Patch Changes

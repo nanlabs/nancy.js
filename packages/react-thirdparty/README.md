@@ -40,7 +40,7 @@ You can find more examples in the [documentation][docs].
 import React, { useState } from "react";
 import {
   GoogleReCaptchaProvider,
-  useGoogleReCaptcha
+  useGoogleReCaptcha,
 } from "@nanlabs/react-thirdparty";
 
 // Your component that wants to use reCAPTCHA

@@ -1,6 +1,6 @@
 {
   "name": "@nanlabs/eslint-config-ts",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "main": "index.js",
   "license": "MIT",
   "files": [
@@ -8,6 +8,7 @@
   ],
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.59.6",
     "eslint": "^7.23.0",
     "@nanlabs/eslint-config": "*"
   },
