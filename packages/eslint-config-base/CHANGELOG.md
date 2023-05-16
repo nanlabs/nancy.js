@@ -1,5 +1,11 @@
 # @nanlabs/eslint-config
 
+## 0.3.6
+
+### Patch Changes
+
+- Added missing peer dep
+
 ## 0.3.5
 
 ### Patch Changes

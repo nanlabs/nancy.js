@@ -1,6 +1,6 @@
 {
   "name": "@nanlabs/eslint-config",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "main": "index.js",
   "license": "MIT",
   "files": [
@@ -9,7 +9,8 @@
   "dependencies": {
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-config-turbo": "^0.0.4"
+    "eslint-config-turbo": "^0.0.4",
+    "eslint-plugin-turbo": "^1.9.6"
   },
   "publishConfig": {
     "access": "public",
