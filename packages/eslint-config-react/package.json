@@ -1,0 +1,28 @@
+{
+  "name": "@nanlabs/eslint-config-react",
+  "version": "0.3.7",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@nanlabs/eslint-config-ts": "*",
+    "eslint": "^7.23.0",
+    "eslint-config-react-hooks": "^1.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "scope": "@nanlabs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanlabs/nancy.js.git"
+  }
+}

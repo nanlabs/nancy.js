@@ -1,37 +1,25 @@
 # @nanlabs/react-hooks
 
-## 0.4.1
+## 0.5.3
 
 ### Patch Changes
 
-- c1eee3f: Updated typed props
+- Updated peer deps
 
-## 0.4.0
-
-### Minor Changes
-
-- bd19692: Added FP, UI examples and more!
-
-## 0.3.0
-
-### Minor Changes
-
-- cd80a9a: Renamed scope package
-
-## 0.2.1
+## 0.5.2
 
 ### Patch Changes
 
-- 46bac22: Testing automated releases
+- Updated npm documentation
 
-## 0.2.0
+## 0.5.1
+
+### Patch Changes
+
+- 179ee81: Initial release on new registry
+
+## 0.5.0
 
 ### Minor Changes
 
-- 08b03bb: Automated releases
-
-## 0.1.0
-
-### Minor Changes
-
-- 40ab551: Initial release
+- c4dae32: Add useDebounce and useIsMobile react hooks

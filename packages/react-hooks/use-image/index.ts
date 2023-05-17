@@ -1,5 +1,5 @@
 export { default as useImage } from "./useImage";
-export type {
+export {
   ImageDecoding,
   ImageLoading,
   UseImageRequest,

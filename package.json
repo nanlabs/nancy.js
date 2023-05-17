@@ -6,27 +6,22 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "is-ci || husky install",
-    "lint-staged": "lint-staged",
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "build-storybook": "turbo run build-storybook",
+    "changeset": "changeset",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,json,css,sass,scss,less,html,yml,yaml}\"",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "changeset": "changeset",
-    "publish-packages": "turbo run build lint && changeset version && changeset publish"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "npm run lint:fix"
-    ],
-    "*.{json,css,sass,scss,less,html,md,yml,yaml}": [
-      "prettier --write"
-    ]
+    "lint-staged": "lint-staged",
+    "prepare": "is-ci || husky install",
+    "publish-packages": "turbo run lint && changeset version && turbo run build && changeset publish",
+    "storybook": "turbo run storybook",
+    "test": "turbo run test",
+    "type-check": "turbo run type-check"
   },
   "devDependencies": {
     "@changesets/cli": "^2.25.0",
+    "@nanlabs/eslint-config-ts": "*",
     "husky": "^8.0.2",
     "is-ci": "^3.0.1",
     "lint-staged": "^13.0.3",
@@ -38,7 +33,7 @@
   },
   "engines": {
     "npm": ">=7.0.0",
-    "node": ">=14.0.0"
+    "node": ">=16.17.0"
   },
   "packageManager": "npm@8.1.2"
 }

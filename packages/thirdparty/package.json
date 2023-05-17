@@ -1,17 +1,21 @@
 {
   "name": "@nanlabs/thirdparty",
-  "version": "0.3.1",
-  "main": "./index.ts",
-  "types": "./index.ts",
+  "version": "0.3.7",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "scope": "@nanlabs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nanlabs/nancy.js.git",
-    "directory": "packages/@nanlabs/thirdparty"
+    "url": "git+https://github.com/nanlabs/nancy.js.git"
   },
   "scripts": {
     "lint": "eslint **/*.ts*",

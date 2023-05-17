@@ -1,13 +1,19 @@
 # @nanlabs/fp
 
-## 0.4.1
+## 0.4.7
 
 ### Patch Changes
 
-- 67d66ef: Updated types to pass static analysis
+- Updated peer deps
 
-## 0.4.0
+## 0.4.6
 
-### Minor Changes
+### Patch Changes
 
-- bd19692: Added FP, UI examples and more!
+- Updated npm documentation
+
+## 0.4.5
+
+### Patch Changes
+
+- 179ee81: Initial release on new registry

@@ -86,6 +86,7 @@ const MyComponent: FC = () => {
   return (
     <div>
       <GoogleReCaptcha
+        action="login_page"
         onVerify={(token) => {
           setToken(token);
         }}

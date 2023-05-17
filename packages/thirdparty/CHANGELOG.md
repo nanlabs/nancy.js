@@ -1,31 +1,19 @@
 # @nanlabs/thirdparty
 
-## 0.3.1
+## 0.3.7
 
 ### Patch Changes
 
-- bd19692: Added FP, UI examples and more!
+- Updated peer deps
 
-## 0.3.0
-
-### Minor Changes
-
-- cd80a9a: Renamed scope package
-
-## 0.2.1
+## 0.3.6
 
 ### Patch Changes
 
-- 46bac22: Testing automated releases
+- Updated npm documentation
 
-## 0.2.0
+## 0.3.5
 
-### Minor Changes
+### Patch Changes
 
-- 08b03bb: Automated releases
-
-## 0.1.0
-
-### Minor Changes
-
-- 40ab551: Initial release
+- 179ee81: Initial release on new registry

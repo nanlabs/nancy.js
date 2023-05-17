@@ -1,0 +1,27 @@
+{
+  "name": "@nanlabs/eslint-config-ts",
+  "version": "0.5.5",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "^7.23.0",
+    "@nanlabs/eslint-config": "*"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "scope": "@nanlabs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanlabs/nancy.js.git"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@nanlabs/eslint-config-next",
+  "version": "0.3.6",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "eslint": "^7.23.0",
+    "@nanlabs/eslint-config-ts": "*",
+    "eslint-config-next": "^12.0.8"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "scope": "@nanlabs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanlabs/nancy.js.git"
+  }
+}

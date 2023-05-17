@@ -1,18 +1,21 @@
 {
   "name": "@nanlabs/react-hooks",
-  "version": "0.4.1",
-  "main": "./index.ts",
+  "version": "0.5.3",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./index.ts",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "scope": "@nanlabs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nanlabs/nancy.js.git",
-    "directory": "packages/@nanlabs/react-hooks"
+    "url": "git+https://github.com/nanlabs/nancy.js.git"
   },
   "scripts": {
     "lint": "eslint **/*.ts*",
