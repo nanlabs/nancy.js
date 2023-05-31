@@ -45,11 +45,6 @@ jobs:
     name: TODO
     uses: nanlabs/devops-reference/.github/workflows/todo.yml@main
 
-  update-readme:
-    if: github.event_name == 'push'
-    name: Update README
-    uses: ./.github/workflows/generate-readme.yml
-
   pr-review:
     if: github.event_name == 'pull_request' && github.event.pull_request.draft == false
     name: Pull Request Validation
