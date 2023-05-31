@@ -24,14 +24,6 @@
 This repository contains different JavaScript and TypeScript apps and tools that are used in different projects here at [NaN Labs](https://www.nanlabs.com/).
 We also provide reusable JavaScript and TypeScript packages.
 
-## Contents
-
-- [Contents](#contents)
-- [Packages](#packages)
-- [Applications](#applications)
-- [Contributing](#contributing)
-- [Contributors](#contributors)
-
 ## Packages
 
 We provide some packages that can be used in different projects. You can find them in the [packages](./packages) folder.
