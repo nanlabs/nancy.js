@@ -8,3 +8,6 @@ export * from './use-image';
 export * from './use-is-mobile';
 export * from './use-debounce';
 export * from './use-interval';
+export * from './use-bomb';
+export * from './use-queue';
+export * from './use-append-task';
