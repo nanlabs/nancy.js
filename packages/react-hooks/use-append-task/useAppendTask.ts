@@ -1,17 +1,23 @@
 import { useState, useEffect } from "react";
 
+interface Task {
+  name: string;
+}
+
 export default function useAppend() {
-  const [taskList, setTaskList] = useState([]);
-  const [size, setSize] = useState(0);
+  const [taskList, setTaskList] = useState<Task[]>([]);
+  const [size, setSize] = useState<number>(0);
 
   // adding a task to the queue
-  const add = (newTask) => {
-    setTaskList((taskList) => [...taskList, newTask]);
+  const add = (newTask: Task) => {
+    setTaskList((prevTaskList) => [...prevTaskList, newTask]);
   };
 
   // this remove a task from the list
-  const remove = (taskName) => {
-    setTaskList((taskList) => taskList.filter((task) => task.name !== taskName));
+  const remove = (taskName: string) => {
+    setTaskList((prevTaskList) =>
+      prevTaskList.filter((task) => task.name !== taskName)
+    );
   };
 
   // here we clear the queue
@@ -19,7 +25,7 @@ export default function useAppend() {
     setTaskList([]);
   };
 
-  // this update the size of the queue
+  // this updates the size of the queue
   useEffect(() => {
     setSize(taskList.length);
   }, [taskList]);

@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-function generateNewBomb() {
+interface Bomb {
+  name: string;
+  timer: number;
+  initiated: boolean;
+}
+
+function generateNewBomb(): Bomb {
   const random = Math.floor(Math.random() * 1000) + 1000;
   return {
     name: "Bomb-" + random,
@@ -10,30 +16,33 @@ function generateNewBomb() {
 }
 
 function useBomb() {
-  const [bomb, setBomb] = useState([]);
+  const [bomb, setBomb] = useState<Bomb[]>([]);
   const size = bomb.length;
 
   function add() {
-    setBomb([...bomb, generateNewBomb()]);
+    setBomb((prevBomb) => [...prevBomb, generateNewBomb()]);
   }
 
-  function remove({ bombOn }) {
-    // remove the bomb
-    setBomb(bomb.filter((bomb) => bomb.name !== bombOn.name))
+  function remove(bombOn: Bomb) {
+    // here we remove the bomb
+    setBomb((prevBomb) => prevBomb.filter((bomb) => bomb.name !== bombOn.name));
   }
 
-  function startBomb({ bombOn }) {
-    setBomb(bomb.map((bomb) => {
-      if (bomb.name === bombOn.name) {
-        return { ...bomb, initiated: true };
-      }
-      return bomb;
-    }));
+  function startBomb(bombOn: Bomb) {
+    setBomb((prevBomb) =>
+      prevBomb.map((bomb) => {
+        if (bomb.name === bombOn.name) {
+          return { ...bomb, initiated: true };
+        }
+        return bomb;
+      })
+    );
+
     const timer = setTimeout(() => {
-      remove({ bombOn });
+      remove(bombOn);
     }, bombOn.timer);
-    return () => clearTimeout(timer);
 
+    return () => clearTimeout(timer);
   }
 
   function clear() {
@@ -43,6 +52,5 @@ function useBomb() {
 
   return { add, startBomb, clear, size, bomb };
 }
-
 
 export default useBomb;

@@ -1,19 +1,23 @@
 import { useState } from "react";
 
-function useQueue(initial = []) {
-  const [queue, setQueue] = useState(initial);
+interface QueueItem {
+  value: number;
+}
+
+function useQueue(initial: QueueItem[] = []) {
+  const [queue, setQueue] = useState<QueueItem[]>(initial);
   const first = queue[0];
   const last = queue[queue.length - 1];
   const size = queue.length;
 
-  function add(item) {
+  function add(item: QueueItem) {
     // add an item to the end of the queue
-    setQueue([...queue, item]);
+    setQueue((prevQueue) => [...prevQueue, item]);
   }
 
   function remove() {
     // remove the first item in the queue
-    setQueue(queue.slice(1));
+    setQueue((prevQueue) => prevQueue.slice(1));
   }
 
   function clear() {
