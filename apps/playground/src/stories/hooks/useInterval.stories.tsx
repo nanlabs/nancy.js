@@ -12,7 +12,7 @@ export const Example = () => {
 };
 
 export default {
-  title: 'Hooks/useInterval',
+  title: 'React Hooks/useInterval',
   component: useInterval,
   argTypes: {
     callback: { control: 'function' },
