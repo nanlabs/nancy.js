@@ -1,16 +1,12 @@
 import { useState } from "react";
 
-interface QueueItem {
-  value: number;
-}
-
-function useQueue(initial: QueueItem[] = []) {
-  const [queue, setQueue] = useState<QueueItem[]>(initial);
+function useQueue(initial: number[] = []) {
+  const [queue, setQueue] = useState(initial);
   const first = queue[0];
   const last = queue[queue.length - 1];
   const size = queue.length;
 
-  function add(item: QueueItem) {
+  function add(item: number) {
     // add an item to the end of the queue
     setQueue((prevQueue) => [...prevQueue, item]);
   }

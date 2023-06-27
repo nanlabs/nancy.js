@@ -1,30 +1,36 @@
-import PropTypes from 'prop-types'
-import { ComponentMeta } from "@storybook/react";
-import { useQueue } from "@nanlabs/react-hooks";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { useQueue } from '@nanlabs/react-hooks';
 
+interface ButtonProps {
+  disabled?: boolean;
+  onClick?: () => void;
+  className?: string;
+  value?: string;
+}
 
-
-function Button({ disabled, onClick, className, value }) {
+function Button({ disabled, onClick, className, value }: ButtonProps) {
   return (
     <button disabled={disabled} onClick={onClick} className={className}>
       {value}
     </button>
-  )
+  );
 }
 
-Button.propTypes = {
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  className: PropTypes.string,
-  value: PropTypes.string,
+interface EnqueueItemsProps {
+  first?: number | never;
+  last?: number | never;
+  size?: number | never;
+  queue?: never[] | number[];
+  remove?: () => void;
 }
 
-function EnqueueItems({ first, last, size, queue }) {
+function EnqueueItems({ first, last, size, queue }: EnqueueItemsProps) {
   return (
     <figure>
       <article>
         <ul>
-          {queue.map((item, i) => {
+          {queue?.map((item, i) => {
             const isFirst = first === item;
             const isLast = last === item;
             if (isFirst) {
@@ -39,19 +45,15 @@ function EnqueueItems({ first, last, size, queue }) {
       </article>
       <figcaption>{size} items in the queue</figcaption>
     </figure>
-  )
+  );
 }
 
-EnqueueItems.propTypes = {
-  first: PropTypes.number,
-  last: PropTypes.number,
-  size: PropTypes.number,
-  queue: PropTypes.arrayOf(PropTypes.number),
-  remove: PropTypes.func,
-};
-
-export function Enqueue() {
+export const Enqueue: ComponentStory<typeof EnqueueItems> = () => {
   const { add, remove, clear, first, last, size, queue } = useQueue([]);
+
+  const handleAdd = () => {
+    add((last || 0) + 1);
+  };
 
   return (
     <div>
@@ -60,16 +62,16 @@ export function Enqueue() {
         <summary>Use a queue to add and remove items</summary>
         <legend>Queue</legend>
         <hr />
-        <Button onClick={() => add((last || 0) + 1)} value={"Add"} />
-        <Button disabled={size === 0} onClick={() => remove()} value={"Remove"} />
-        <Button disabled={size === 0} onClick={() => clear()} value={"Clear"} />
+        <Button onClick={handleAdd} value={'Add'} />
+        <Button disabled={size === 0} onClick={() => remove?.()} value={'Remove'} />
+        <Button disabled={size === 0} onClick={() => clear?.()} value={'Clear'} />
       </header>
       <EnqueueItems first={first} last={last} size={size} queue={queue} />
     </div>
   );
-}
+};
 
 export default {
-  title: "React Hooks/useQueue",
-  component: Enqueue,
-} as ComponentMeta<typeof Enqueue>;
+  title: 'React Hooks/useQueue',
+  component: EnqueueItems,
+} as ComponentMeta<typeof EnqueueItems>;
