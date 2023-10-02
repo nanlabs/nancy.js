@@ -7,13 +7,13 @@ export const Example: FC = () => {
   const prevCount = usePrevious(count);
 
   return (
-    <p>
+    <div>
       <button onClick={() => setCount(count + 1)}>+</button>
       <button onClick={() => setCount(count - 1)}>-</button>
       <p>
         Now: {count}, before: {prevCount}
       </p>
-    </p>
+    </div>
   );
 };
 
