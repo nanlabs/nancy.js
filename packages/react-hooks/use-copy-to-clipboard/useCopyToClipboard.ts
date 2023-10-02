@@ -11,9 +11,7 @@ const useCopyToClipboard = (): [
   (value: string, userInitiated?: boolean) => void
 ] => {
   const [clipBoardState, setClipBoardState] = useState<CopyToClipboardState>({
-    value: undefined,
     noUserInteraction: false,
-    error: undefined,
   });
 
   const copyToClipboard = async (text: string, userInitiated = false) => {
