@@ -11,4 +11,5 @@ export * from "./use-interval";
 export * from "./use-bomb";
 export * from "./use-queue";
 export * from "./use-append-task";
+export * from "./use-copy-to-clipboard";
 export * from "./use-previous";
