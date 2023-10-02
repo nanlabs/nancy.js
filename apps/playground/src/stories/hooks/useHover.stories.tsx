@@ -1,38 +1,29 @@
 import React, { useCallback, useMemo, useRef, useState } from 'react';
-import { useHover } from '../../../../../packages/react-hooks/use-hover';
-// import { useHover } from "@nanlabs/react-hooks";
+import { useHover } from "@nanlabs/react-hooks";
 
 export const Example = () => {
-  const [isCbMemoBroken, setIsCbMemoBroken] = useState(false);
-  const [isTargetMemoBroken, setTargetMemoBroken] = useState(false);
+  const [isMemoEnabled, setIsMemoEnabled] = useState(false);
+  const [isRefTarget, setIsRefTarget] = useState(false);
   const [events, setEvents] = useState<string[]>([])
 
   const getEventHandler = useCallback((eventName: string) => {
     return () => setEvents((events) => [...events, `"${eventName}" callback fired`])
   }, [setEvents])
 
-  const memoizedCallbacks = useMemo(
-    () => ({
-      onChange: getEventHandler('onChange'),
-      onLeave: getEventHandler('onLeave'),
-      onEnter: getEventHandler('onEnter'),
-    }),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [getEventHandler, isCbMemoBroken]
-  )
-
   const notMemoizedCallbacks = {
     onChange: getEventHandler('onChange'),
     onLeave: getEventHandler('onLeave'),
     onEnter: getEventHandler('onEnter'),
   }
+
+  const memoizedCallbacks = useMemo(() => ({...notMemoizedCallbacks}), [getEventHandler, isMemoEnabled])
   
   const divRef = useRef<HTMLDivElement | null>(null)
-  const getEl = () => divRef.current;
+  const getElement = () => divRef.current;
 
   const isHovered = useHover(
-    isTargetMemoBroken ? getEl : divRef,
-    isCbMemoBroken ? notMemoizedCallbacks : memoizedCallbacks
+    isRefTarget ? divRef : getElement,
+    isMemoEnabled ? memoizedCallbacks : notMemoizedCallbacks
   );
 
   const hoverableStyles = {
@@ -54,14 +45,14 @@ export const Example = () => {
       </h2>
 
       <span>
-        <button onClick={() => setIsCbMemoBroken((val) => !val)}>
-          {isCbMemoBroken ? 'Callbacks change each render' : 'Callbacks memoized'}
+        <button onClick={() => setIsMemoEnabled((val) => !val)}>
+          {isMemoEnabled ? 'Callbacks memoized' : 'Callbacks change each render'}
         </button>
       </span>
 
       <span>
-        <button onClick={() => setTargetMemoBroken((val) => !val)}>
-          {isTargetMemoBroken ? 'Target provided as function' : 'Target provided as ref'}
+        <button onClick={() => setIsRefTarget((val) => !val)}>
+          {isRefTarget ? 'Target provided as ref' : 'Target provided as function'}
         </button>
       </span>
     </div>

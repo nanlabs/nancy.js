@@ -23,14 +23,14 @@ const useHover = <T extends TargetType = Element>(target: HoverTarget<T>, option
     setIsHovered(isHovered)
     options?.onChange?.(isHovered);
     options?.onEnter?.()
-  }, [options?.onEnter])
+  }, [options?.onEnter, options?.onChange])
   
   const onMouseLeave = useCallback(() => {
     const isHovered = false;
     setIsHovered(isHovered)
     options?.onChange?.(isHovered);
     options?.onLeave?.()
-  }, [options?.onLeave])
+  }, [options?.onLeave, options?.onChange])
 
   const prevCallbacks = useRef({ onMouseEnter, onMouseLeave });
 
@@ -42,27 +42,27 @@ const useHover = <T extends TargetType = Element>(target: HoverTarget<T>, option
     ) {
       return;
     }
-    let targetEl: TargetValue<T>;
+    let targetElement: TargetValue<T>;
     
     
     if (typeof target === 'function') {
-      targetEl = target()
+      targetElement = target()
     } else if ('current' in target) {
-      targetEl = target.current;
+      targetElement = target.current;
     }
 
-    if (!targetEl) {
+    if (!targetElement) {
       return;
     }
 
-    targetEl?.addEventListener('mouseenter', onMouseEnter)
-    targetEl?.addEventListener('mouseleave', onMouseLeave)
+    targetElement?.addEventListener('mouseenter', onMouseEnter)
+    targetElement?.addEventListener('mouseleave', onMouseLeave)
     
     // clean up previous listeners
     prevCallbacks.current = { onMouseEnter, onMouseLeave }
     return () => {
-      targetEl?.removeEventListener('mouseenter', prevCallbacks.current.onMouseEnter)
-      targetEl?.removeEventListener('mouseleave', prevCallbacks.current.onMouseLeave)
+      targetElement?.removeEventListener('mouseenter', prevCallbacks.current.onMouseEnter)
+      targetElement?.removeEventListener('mouseleave', prevCallbacks.current.onMouseLeave)
     }
   }, [target, onMouseEnter, onMouseLeave])
   
