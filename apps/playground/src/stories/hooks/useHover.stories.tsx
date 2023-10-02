@@ -16,7 +16,7 @@ export const Example = () => {
     onEnter: getEventHandler('onEnter'),
   }
 
-  const memoizedCallbacks = useMemo(() => ({...notMemoizedCallbacks}), [getEventHandler, isMemoEnabled])
+  const memoizedCallbacks = useMemo(() => ({...notMemoizedCallbacks}), [getEventHandler])
   
   const divRef = useRef<HTMLDivElement | null>(null)
   const getElement = () => divRef.current;
@@ -58,7 +58,7 @@ export const Example = () => {
     </div>
     <div> Event log:
       <ol>
-        {events.map((event, i) => <li key={i}>{event}</li>)}
+        {events.map((event, i) => <li key={`${event}-${i}`}>{event}</li>)}
       </ol>
     </div>
   </div>;
