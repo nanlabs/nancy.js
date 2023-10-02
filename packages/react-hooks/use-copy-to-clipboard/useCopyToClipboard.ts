@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 export interface CopyToClipboardState {
-  value?: string | null;
+  value?: string;
   noUserInteraction: boolean;
-  error?: Error | null;
+  error?: Error;
 }
 
 const useCopyToClipboard = (): [
@@ -11,9 +11,9 @@ const useCopyToClipboard = (): [
   (value: string, userInitiated?: boolean) => void
 ] => {
   const [clipBoardState, setClipBoardState] = useState<CopyToClipboardState>({
-    value: null,
+    value: undefined,
     noUserInteraction: false,
-    error: null,
+    error: undefined,
   });
 
   const copyToClipboard = async (text: string, userInitiated = false) => {
@@ -22,11 +22,11 @@ const useCopyToClipboard = (): [
       setClipBoardState({
         value: text,
         noUserInteraction: userInitiated,
-        error: null,
+        error: undefined,
       });
     } catch (err: unknown) {
       setClipBoardState({
-        value: null,
+        value: undefined,
         noUserInteraction: userInitiated,
         error: err as Error,
       });
