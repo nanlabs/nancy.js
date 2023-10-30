@@ -1,5 +1,11 @@
 # @nanlabs/react-ui
 
+## 0.4.8
+
+### Patch Changes
+
+- Hacktoberfest finished!
+
 ## 0.4.7
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @nanlabs/react-hooks
 
+## 0.5.4
+
+### Patch Changes
+
+- Hacktoberfest finished!
+
 ## 0.5.3
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @nanlabs/eslint-config-ts
 
+## 0.5.6
+
+### Patch Changes
+
+- Hacktoberfest finished!
+- Updated dependencies
+  - @nanlabs/eslint-config@0.3.8
+
 ## 0.5.5
 
 ### Patch Changes

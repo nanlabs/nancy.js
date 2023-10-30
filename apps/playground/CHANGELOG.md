@@ -1,5 +1,14 @@
 # @nanlabs/playground
 
+## 0.0.3
+
+### Patch Changes
+
+- Hacktoberfest finished!
+- Updated dependencies
+  - @nanlabs/react-hooks@0.5.4
+  - @nanlabs/react-ui@0.4.8
+
 ## 0.0.2
 
 ### Patch Changes
