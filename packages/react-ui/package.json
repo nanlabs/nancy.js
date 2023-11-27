@@ -1,6 +1,6 @@
 {
   "name": "@nanlabs/react-ui",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",

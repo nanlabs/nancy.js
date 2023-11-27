@@ -1,5 +1,11 @@
 # @nanlabs/thirdparty
 
+## 0.3.9
+
+### Patch Changes
+
+- New release after hacktoberfest
+
 ## 0.3.8
 
 ### Patch Changes

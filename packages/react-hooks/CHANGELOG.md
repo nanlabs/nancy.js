@@ -1,5 +1,11 @@
 # @nanlabs/react-hooks
 
+## 0.5.5
+
+### Patch Changes
+
+- New release after hacktoberfest
+
 ## 0.5.4
 
 ### Patch Changes
