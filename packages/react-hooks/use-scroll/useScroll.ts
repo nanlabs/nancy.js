@@ -4,26 +4,17 @@ export type UseScrollParams = {
   elementRef: React.RefObject<HTMLElement>;
 };
 
-export enum ScrollDirections {
-  Top = "top",
-  Bot = "bot",
-  Right = "right",
-  Left = "left",
-}
+export type ScrollDirections = "top" | "bot" | "left" | "right";
 
 const useScroll = ({ elementRef }: UseScrollParams) => {
   const scroll = useCallback(
-    (direction, spaceToScroll) => {
+    (direction: ScrollDirections, spaceToScroll: number) => {
       if (!elementRef.current) return;
 
-      const topMovement =
-        direction === ScrollDirections.Top ? spaceToScroll : 0;
-      const botMovement =
-        direction === ScrollDirections.Bot ? -spaceToScroll : 0;
-      const leftMovement =
-        direction === ScrollDirections.Left ? -spaceToScroll : 0;
-      const rightMovement =
-        direction === ScrollDirections.Right ? spaceToScroll : 0;
+      const topMovement = direction === "top" ? spaceToScroll : 0;
+      const botMovement = direction === "bot" ? -spaceToScroll : 0;
+      const leftMovement = direction === "left" ? -spaceToScroll : 0;
+      const rightMovement = direction === "right" ? spaceToScroll : 0;
 
       elementRef.current.scrollBy({
         top: topMovement || botMovement,
