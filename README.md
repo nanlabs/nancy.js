@@ -56,7 +56,7 @@ We provide some packages that can be used in different projects. You can find th
 ## Contributors
 
 <a href="https://github.com/nanlabs/nancy.js/contributors">
-  <img src="https://contrib.rocks/image?repo=nanlabs/nancy.js"/>
+  <img src="https://contrib.rocks/image?repo=nanlabs/nancy.js" alt="Contributors" />
 </a>
 
 Made with [contributors-img](https://contrib.rocks).
