@@ -1,5 +1,12 @@
 # @nanlabs/react-hooks
 
+## 0.6.0
+
+### Minor Changes
+
+- 08c613c: - useScroll hook and story example added
+  - useOverflow hook and story example added
+
 ## 0.5.5
 
 ### Patch Changes
