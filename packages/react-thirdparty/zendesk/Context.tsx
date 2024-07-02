@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
 export interface ZendeskContextProps {
-  executeZendesk: (action: string, params?: any) => void;
+  executeZendesk: ZendeskWidget;
 }
 
 export const ZendeskContext = createContext<ZendeskContextProps | undefined>(

@@ -14,12 +14,12 @@ import {
 export const ZendeskProvider: React.FC<
   ZendeskScriptProps & { children: ReactNode }
 > = ({ zendeskKey, scriptId, appendTo = "body", handleOnLoad, children }) => {
-  const [zendeskClient, setZendeskClient] = useState<typeof window.zE | null>(
+  const [zendeskClient, setZendeskClient] = useState<ZendeskWidget | null>(
     null
   );
 
-  const executeZendesk = useCallback(
-    (action: string, params?: any) => {
+  const executeZendesk: ZendeskWidget = useCallback(
+    (action, params) => {
       if (!zendeskClient) {
         console.warn("Zendesk client is not available");
         return;
@@ -30,7 +30,7 @@ export const ZendeskProvider: React.FC<
   );
 
   const onLoad = () => {
-    if (typeof window === "undefined" || !(window as any).zE) {
+    if (!window?.zE) {
       console.warn("Zendesk script is not available");
       return;
     }
