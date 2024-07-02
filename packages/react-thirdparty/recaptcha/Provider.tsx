@@ -1,6 +1,9 @@
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { GoogleReCaptchaContext } from "./Context";
-import { injectGoogleReCaptchaScript, removeScript } from "@nanlabs/thirdparty";
+import {
+  injectGoogleReCaptchaScript,
+  removeGoogleReCaptchaScript,
+} from "@nanlabs/thirdparty";
 
 const SCRIPT_ID = "google-recaptcha-v3";
 
@@ -83,7 +86,7 @@ export const GoogleReCaptchaProvider: FC<GoogleReCaptchaProviderProps> = ({
 
     return () => {
       // remove badge and script
-      removeScript(SCRIPT_ID);
+      removeGoogleReCaptchaScript(SCRIPT_ID);
     };
   }, [reCaptchaKey]);
 

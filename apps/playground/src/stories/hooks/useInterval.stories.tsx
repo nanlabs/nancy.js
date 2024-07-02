@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useInterval } from '@nanlabs/react-hooks';
+import React, { useState } from "react";
+import { useInterval } from "@nanlabs/react-hooks";
 
 export const Example = () => {
   const [count, setCount] = useState(0);
@@ -12,10 +12,10 @@ export const Example = () => {
 };
 
 export default {
-  title: 'React Hooks/useInterval',
+  title: "React Hooks/useInterval",
   component: useInterval,
   argTypes: {
-    callback: { control: 'function' },
-    delay: { control: 'number' },
+    callback: { control: "function" },
+    delay: { control: "number" },
   },
 };

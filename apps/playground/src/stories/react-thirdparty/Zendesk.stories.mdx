@@ -1,0 +1,101 @@
+import { Meta } from "@storybook/addon-docs";
+import React from "react";
+import { Zendesk } from "@nanlabs/react-thirdparty";
+import { useZendesk } from "@nanlabs/react-thirdparty";
+
+<Meta title="React Thirdparty/Zendesk" />
+
+<h1 align="center">React Zendesk Integration</h1>
+<div align="center">
+
+Integrating Zendesk
+
+</div>
+
+## Usage
+
+### Provide Zendesk Key
+
+To use this integration, you need to create a Zendesk key for your domain.
+
+### Components
+
+#### Zendesk
+
+`Zendesk` is a react component that can be used in your app to load the Zendesk script. It provides props to customize the script loading process.
+
+```jsx
+import Zendesk from "@nanlabs/react-thirdparty";
+
+const App = () => (
+  <Zendesk
+    zendeskKey="[Your zendesk key]"
+    handleOnLoad={() => console.log("Zendesk script loaded!")}
+  />
+);
+
+export default App;
+```
+
+### React Hook: useZendesk
+
+If you prefer a React Hook approach, you can choose to use the custom hook `useZendesk`.
+
+It's very simple to use the hook:
+
+```tsx
+import { useZendesk } from "@nanlabs/react-thirdparty";
+
+const YourZendeskComponent = () => {
+  const handleLoad = () => {
+    console.log("Zendesk script loaded!");
+  };
+
+  useZendesk({
+    zendeskKey: "[Your zendesk key]",
+    scriptId: "zendesk-script",
+    handleOnLoad: handleLoad,
+  });
+
+  return <div>Your component content</div>;
+};
+
+export default YourZendeskComponent;
+```
+
+## Storybook Examples
+
+### Zendesk Component Example
+
+```jsx
+import React from "react";
+import Zendesk from "@nanlabs/react-thirdparty";
+
+export const ZendeskComponentExample = () => (
+  <Zendesk
+    zendeskKey="YOUR_ZENDESK_KEY"
+    handleOnLoad={() => alert("Zendesk script loaded!")}
+  />
+);
+```
+
+### useZendesk Hook Example
+
+```jsx
+import React from "react";
+import { useZendesk } from "@nanlabs/react-thirdparty";
+
+export const UseZendeskHookExample = () => {
+  const handleLoad = () => {
+    alert("Zendesk script loaded!");
+  };
+
+  useZendesk({
+    zendeskKey: "YOUR_ZENDESK_KEY",
+    scriptId: "zendesk-script",
+    handleOnLoad: handleLoad,
+  });
+
+  return <div>Your component content using hook</div>;
+};
+```
