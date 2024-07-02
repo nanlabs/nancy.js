@@ -1,7 +1,7 @@
 import { createContext, useContext } from "react";
 
 export interface ZendeskContextProps {
-  executeZendesk?: ZendeskWidget;
+  executeZendesk?: ZendeskMessagingWidget;
 }
 
 export const ZendeskContext = createContext<ZendeskContextProps>({});

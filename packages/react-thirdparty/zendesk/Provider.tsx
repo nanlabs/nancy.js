@@ -1,4 +1,4 @@
-import React, { useEffect, ReactNode, useCallback, useState } from "react";
+import React, { useEffect, ReactNode, useState } from "react";
 import { ZendeskContext } from "./Context";
 import {
   injectZendeskScript,
@@ -14,20 +14,9 @@ import {
 export const ZendeskProvider: React.FC<
   ZendeskScriptProps & { children: ReactNode }
 > = ({ zendeskKey, scriptId, appendTo = "body", handleOnLoad, children }) => {
-  const [zendeskClient, setZendeskClient] = useState<ZendeskWidget | null>(
-    null
-  );
-
-  const executeZendesk: ZendeskWidget = useCallback(
-    (action, params) => {
-      if (!zendeskClient) {
-        console.warn("Zendesk client is not available");
-        return;
-      }
-      zendeskClient(action, params);
-    },
-    [zendeskClient]
-  );
+  const [zendeskClient, setZendeskClient] = useState<
+    ZendeskMessagingWidget | undefined
+  >(undefined);
 
   const onLoad = () => {
     if (!window?.zE) {
@@ -50,11 +39,11 @@ export const ZendeskProvider: React.FC<
 
     return () => {
       removeZendeskScript(scriptId);
-      setZendeskClient(null);
+      setZendeskClient(undefined);
     };
   }, [zendeskKey, scriptId, appendTo, handleOnLoad]);
 
-  const zendeskContextValue = { executeZendesk };
+  const zendeskContextValue = { executeZendesk: zendeskClient };
 
   return (
     <ZendeskContext.Provider value={zendeskContextValue}>

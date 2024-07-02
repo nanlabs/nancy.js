@@ -15,11 +15,11 @@ const Zendesk: React.FC = () => {
     }
 
     // Example usage of executeZendesk when the component mounts
-    executeZendesk("webWidget", "open");
+    executeZendesk("messenger", "open");
 
     return () => {
       // Example cleanup if needed
-      executeZendesk("webWidget", "close");
+      executeZendesk("messenger", "close");
     };
   }, [executeZendesk]);
 
