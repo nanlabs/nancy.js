@@ -9,6 +9,11 @@ const Zendesk: React.FC = () => {
   const { executeZendesk } = useZendesk();
 
   useEffect(() => {
+    if (!executeZendesk) {
+      console.warn("Zendesk client is not available");
+      return;
+    }
+
     // Example usage of executeZendesk when the component mounts
     executeZendesk("webWidget", "open");
 
