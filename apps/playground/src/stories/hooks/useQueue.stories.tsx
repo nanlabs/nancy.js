@@ -1,6 +1,6 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { useQueue } from '@nanlabs/react-hooks';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { useQueue } from "@nanlabs/react-hooks";
 
 interface ButtonProps {
   disabled?: boolean;
@@ -62,9 +62,17 @@ export const Enqueue: ComponentStory<typeof EnqueueItems> = () => {
         <summary>Use a queue to add and remove items</summary>
         <legend>Queue</legend>
         <hr />
-        <Button onClick={handleAdd} value={'Add'} />
-        <Button disabled={size === 0} onClick={() => remove?.()} value={'Remove'} />
-        <Button disabled={size === 0} onClick={() => clear?.()} value={'Clear'} />
+        <Button onClick={handleAdd} value={"Add"} />
+        <Button
+          disabled={size === 0}
+          onClick={() => remove?.()}
+          value={"Remove"}
+        />
+        <Button
+          disabled={size === 0}
+          onClick={() => clear?.()}
+          value={"Clear"}
+        />
       </header>
       <EnqueueItems first={first} last={last} size={size} queue={queue} />
     </div>
@@ -72,6 +80,6 @@ export const Enqueue: ComponentStory<typeof EnqueueItems> = () => {
 };
 
 export default {
-  title: 'React Hooks/useQueue',
+  title: "React Hooks/useQueue",
   component: EnqueueItems,
 } as ComponentMeta<typeof EnqueueItems>;
