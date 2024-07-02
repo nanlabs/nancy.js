@@ -1,6 +1,7 @@
 import React, { FC, useCallback, useEffect, useState } from "react";
 import { GoogleReCaptchaContext } from "./Context";
 import {
+  GoogleReCaptchaSrc,
   injectGoogleReCaptchaScript,
   removeGoogleReCaptchaScript,
 } from "@nanlabs/thirdparty";
@@ -41,7 +42,7 @@ export const GoogleReCaptchaProvider: FC<GoogleReCaptchaProviderProps> = ({
 }) => {
   const [grecaptcha, setGrecaptcha] = useState<ReCaptchaInstance | null>(null);
 
-  const googleRecaptchaSrc = () => {
+  const googleRecaptchaSrc = (): GoogleReCaptchaSrc => {
     const hostName = useRecaptchaNet ? "recaptcha.net" : "google.com";
 
     return `https://www.${hostName}/recaptcha/api.js`;

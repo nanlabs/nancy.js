@@ -1,18 +1,10 @@
-import { useEffect } from "react";
 import { useZendeskContext } from "./Context";
-import { injectZendeskScript, removeZendeskScript } from "@nanlabs/thirdparty";
 
 /**
- * Custom hook to inject and manage Zendesk script.
+ * Custom hook to access Zendesk client through context.
+ * @returns The Zendesk context value.
  */
-export const useZendesk = (): void => {
-  const { zendeskKey, scriptId, appendTo, handleOnLoad } = useZendeskContext();
-
-  useEffect(() => {
-    injectZendeskScript({ zendeskKey, scriptId, appendTo, handleOnLoad });
-
-    return () => {
-      removeZendeskScript(scriptId);
-    };
-  }, [zendeskKey, scriptId, appendTo, handleOnLoad]);
+export const useZendesk = () => {
+  const context = useZendeskContext();
+  return context;
 };

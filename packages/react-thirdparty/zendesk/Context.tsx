@@ -1,7 +1,8 @@
 import { createContext, useContext } from "react";
-import { ZendeskScriptProps } from "@nanlabs/thirdparty";
 
-type ZendeskContextProps = ZendeskScriptProps;
+export interface ZendeskContextProps {
+  executeZendesk: (action: string, params?: any) => void;
+}
 
 export const ZendeskContext = createContext<ZendeskContextProps | undefined>(
   undefined

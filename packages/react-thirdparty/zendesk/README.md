@@ -42,8 +42,8 @@ export default App;
 `Zendesk` is a React component that can be used in your app to load the Zendesk script. It utilizes the context provided by `ZendeskProvider`.
 
 ```jsx
-import React from "react";
-import Zendesk from "@nanlabs/react-thirdparty";
+import React, { useEffect } from "react";
+import { Zendesk } from "@nanlabs/react-thirdparty";
 
 const YourComponent = () => (
   <div>
@@ -65,9 +65,15 @@ import React from "react";
 import { useZendesk } from "@nanlabs/react-thirdparty";
 
 const YourZendeskComponent = () => {
-  useZendesk();
+  const { executeZendesk } = useZendesk();
 
-  return <div>Your component content</div>;
+  return (
+    <div>
+      <button onClick={() => executeZendesk("webWidget", "open")}>
+        Open Zendesk Widget
+      </button>
+    </div>
+  );
 };
 
 export default YourZendeskComponent;

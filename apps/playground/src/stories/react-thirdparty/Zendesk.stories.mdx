@@ -1,7 +1,4 @@
 import { Meta } from "@storybook/addon-docs";
-import React from "react";
-import { ZendeskProvider, Zendesk } from "@nanlabs/react-thirdparty";
-import { useZendesk } from "@nanlabs/react-thirdparty";
 
 <Meta title="React Thirdparty/Zendesk" />
 
@@ -68,15 +65,21 @@ import React from "react";
 import { useZendesk } from "@nanlabs/react-thirdparty";
 
 const YourZendeskComponent = () => {
-  useZendesk();
+  const { executeZendesk } = useZendesk();
 
-  return <div>Your component content</div>;
+  return (
+    <div>
+      <button onClick={() => executeZendesk('webWidget', 'open')}>
+        Open Zendesk Widget
+      </button>
+    </div>
+  );
 };
 
 export default YourZendeskComponent;
 ```
 
-## Storybook Examples
+## More Examples!
 
 ### Zendesk Component Example
 
@@ -98,9 +101,15 @@ import React from "react";
 import { ZendeskProvider, useZendesk } from "@nanlabs/react-thirdparty";
 
 export const UseZendeskHookExample = () => {
-  useZendesk();
+  const { executeZendesk } = useZendesk();
 
-  return <div>Your component content using hook</div>;
+  return (
+    <div>
+      <button onClick={() => executeZendesk('webWidget', 'open')}>
+        Open Zendesk Widget
+      </button>
+    </div>
+  );
 };
 
 export const UseZendeskHookExampleWrapped = () => (
