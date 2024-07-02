@@ -1,5 +1,9 @@
+export type GoogleReCaptchaSrc =
+  | "https://www.google.com/recaptcha/api.js"
+  | "https://www.recaptcha.net/recaptcha/api.js";
+
 export interface GoogleReCaptchaScriptProps {
-  src?: string;
+  src?: GoogleReCaptchaSrc;
   reCaptchaKey: string;
   scriptId: string;
   language?: string;
@@ -74,10 +78,10 @@ export const injectGoogleReCaptchaScript = ({
 };
 
 /**
- * removeScript removes the Google ReCaptcha script tag from the DOM.
+ * removeGoogleReCaptchaScript removes the Google ReCaptcha script tag from the DOM.
  * @param {string} scriptId - The id of the script tag.
  */
-export const removeScript = (scriptId: string) => {
+export const removeGoogleReCaptchaScript = (scriptId: string) => {
   // remove badge
   const nodeBadge = document.querySelector(".grecaptcha-badge");
   if (nodeBadge && nodeBadge.parentNode) {

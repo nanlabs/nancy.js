@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
 import { ReCaptchaExecuteOptions } from "./Provider";
 
 export interface GoogleReCaptchaConsumerProps {
@@ -12,3 +12,6 @@ const GoogleReCaptchaContext = createContext<GoogleReCaptchaConsumerProps>({
 const { Consumer: GoogleReCaptchaConsumer } = GoogleReCaptchaContext;
 
 export { GoogleReCaptchaConsumer, GoogleReCaptchaContext };
+
+export const useGoogleReCaptchaContext = () =>
+  useContext(GoogleReCaptchaContext);

@@ -1,5 +1,5 @@
 import { useCallback, useEffect } from "react";
-import { useGoogleReCaptchaContext } from "./useGoogleReCaptchaContext";
+import { useGoogleReCaptchaContext } from "./Context";
 
 export interface GoogleReCaptchaConfig {
   onVerify: (token: string) => void | Promise<void>;

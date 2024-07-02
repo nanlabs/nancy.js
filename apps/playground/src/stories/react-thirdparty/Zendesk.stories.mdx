@@ -1,0 +1,120 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="React Thirdparty/Zendesk" />
+
+<h1 align="center">React Zendesk Integration</h1>
+<div align="center">
+
+Integrating Zendesk
+
+</div>
+
+## Usage
+
+### Provide Zendesk Key
+
+To use this integration, you need to create a Zendesk key for your domain.
+
+### Components
+
+#### ZendeskProvider
+
+`ZendeskProvider` is a React component that wraps your application and loads the Zendesk script. It provides context to other components and hooks that need to interact with Zendesk.
+
+```jsx
+import { ZendeskProvider } from "@nanlabs/react-thirdparty";
+
+const App = () => (
+  <ZendeskProvider
+    zendeskKey="[Your zendesk key]"
+    scriptId="zendesk-script"
+    handleOnLoad={() => console.log("Zendesk script loaded!")}
+  >
+    <YourApp />
+  </ZendeskProvider>
+);
+
+export default App;
+```
+
+#### Zendesk Component
+
+`Zendesk` is a React component that can be used in your app to load the Zendesk script. It utilizes the context provided by `ZendeskProvider`.
+
+```jsx
+import React from "react";
+import { Zendesk } from "@nanlabs/react-thirdparty";
+
+const YourComponent = () => (
+  <div>
+    <Zendesk />
+  </div>
+);
+
+export default YourComponent;
+```
+
+### React Hook: useZendesk
+
+If you prefer a React Hook approach, you can choose to use the custom hook `useZendesk`.
+
+It's very simple to use the hook:
+
+```tsx
+import React from "react";
+import { useZendesk } from "@nanlabs/react-thirdparty";
+
+const YourZendeskComponent = () => {
+  const { executeZendesk } = useZendesk();
+
+  return (
+    <div>
+      <button onClick={() => executeZendesk('webWidget', 'open')}>
+        Open Zendesk Widget
+      </button>
+    </div>
+  );
+};
+
+export default YourZendeskComponent;
+```
+
+## More Examples!
+
+### Zendesk Component Example
+
+```jsx
+import React from "react";
+import { ZendeskProvider, Zendesk } from "@nanlabs/react-thirdparty";
+
+export const ZendeskComponentExample = () => (
+  <ZendeskProvider zendeskKey="YOUR_ZENDESK_KEY" scriptId="zendesk-script">
+    <Zendesk />
+  </ZendeskProvider>
+);
+```
+
+### useZendesk Hook Example
+
+```jsx
+import React from "react";
+import { ZendeskProvider, useZendesk } from "@nanlabs/react-thirdparty";
+
+export const UseZendeskHookExample = () => {
+  const { executeZendesk } = useZendesk();
+
+  return (
+    <div>
+      <button onClick={() => executeZendesk('webWidget', 'open')}>
+        Open Zendesk Widget
+      </button>
+    </div>
+  );
+};
+
+export const UseZendeskHookExampleWrapped = () => (
+  <ZendeskProvider zendeskKey="YOUR_ZENDESK_KEY" scriptId="zendesk-script">
+    <UseZendeskHookExample />
+  </ZendeskProvider>
+);
+```
