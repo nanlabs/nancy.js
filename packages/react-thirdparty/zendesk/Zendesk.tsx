@@ -1,12 +1,14 @@
-import React from "react";
-import { ZendeskScriptProps } from "@nanlabs/thirdparty";
+import React, { FC } from "react";
 import { useZendesk } from "./useZendesk";
 
-export type ZendeskProps = ZendeskScriptProps;
+/**
+ * Zendesk component to load the Zendesk script.
+ * @returns The Zendesk container element.
+ */
+const Zendesk: FC = () => {
+  useZendesk();
 
-const Zendesk: React.FC<ZendeskProps> = (config: ZendeskProps) => {
-  useZendesk(config);
-  return null;
+  return <div id="zendesk-container" />;
 };
 
 export default Zendesk;

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import {
   GoogleReCaptchaConfig,
   useGoogleReCaptcha,
@@ -6,5 +6,5 @@ import {
 
 export const GoogleReCaptcha: FC<GoogleReCaptchaConfig> = (config) => {
   useGoogleReCaptcha(config);
-  return null;
+  return <div id="google-recaptcha-container" />;
 };

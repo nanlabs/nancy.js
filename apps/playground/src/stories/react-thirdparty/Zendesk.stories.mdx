@@ -1,6 +1,6 @@
 import { Meta } from "@storybook/addon-docs";
 import React from "react";
-import { Zendesk } from "@nanlabs/react-thirdparty";
+import { ZendeskProvider, Zendesk } from "@nanlabs/react-thirdparty";
 import { useZendesk } from "@nanlabs/react-thirdparty";
 
 <Meta title="React Thirdparty/Zendesk" />
@@ -20,21 +20,41 @@ To use this integration, you need to create a Zendesk key for your domain.
 
 ### Components
 
-#### Zendesk
+#### ZendeskProvider
 
-`Zendesk` is a react component that can be used in your app to load the Zendesk script. It provides props to customize the script loading process.
+`ZendeskProvider` is a React component that wraps your application and loads the Zendesk script. It provides context to other components and hooks that need to interact with Zendesk.
 
 ```jsx
-import Zendesk from "@nanlabs/react-thirdparty";
+import { ZendeskProvider } from "@nanlabs/react-thirdparty";
 
 const App = () => (
-  <Zendesk
+  <ZendeskProvider
     zendeskKey="[Your zendesk key]"
+    scriptId="zendesk-script"
     handleOnLoad={() => console.log("Zendesk script loaded!")}
-  />
+  >
+    <YourApp />
+  </ZendeskProvider>
 );
 
 export default App;
+```
+
+#### Zendesk Component
+
+`Zendesk` is a React component that can be used in your app to load the Zendesk script. It utilizes the context provided by `ZendeskProvider`.
+
+```jsx
+import React from "react";
+import { Zendesk } from "@nanlabs/react-thirdparty";
+
+const YourComponent = () => (
+  <div>
+    <Zendesk />
+  </div>
+);
+
+export default YourComponent;
 ```
 
 ### React Hook: useZendesk
@@ -44,18 +64,11 @@ If you prefer a React Hook approach, you can choose to use the custom hook `useZ
 It's very simple to use the hook:
 
 ```tsx
+import React from "react";
 import { useZendesk } from "@nanlabs/react-thirdparty";
 
 const YourZendeskComponent = () => {
-  const handleLoad = () => {
-    console.log("Zendesk script loaded!");
-  };
-
-  useZendesk({
-    zendeskKey: "[Your zendesk key]",
-    scriptId: "zendesk-script",
-    handleOnLoad: handleLoad,
-  });
+  useZendesk();
 
   return <div>Your component content</div>;
 };
@@ -69,13 +82,12 @@ export default YourZendeskComponent;
 
 ```jsx
 import React from "react";
-import Zendesk from "@nanlabs/react-thirdparty";
+import { ZendeskProvider, Zendesk } from "@nanlabs/react-thirdparty";
 
 export const ZendeskComponentExample = () => (
-  <Zendesk
-    zendeskKey="YOUR_ZENDESK_KEY"
-    handleOnLoad={() => alert("Zendesk script loaded!")}
-  />
+  <ZendeskProvider zendeskKey="YOUR_ZENDESK_KEY" scriptId="zendesk-script">
+    <Zendesk />
+  </ZendeskProvider>
 );
 ```
 
@@ -83,19 +95,17 @@ export const ZendeskComponentExample = () => (
 
 ```jsx
 import React from "react";
-import { useZendesk } from "@nanlabs/react-thirdparty";
+import { ZendeskProvider, useZendesk } from "@nanlabs/react-thirdparty";
 
 export const UseZendeskHookExample = () => {
-  const handleLoad = () => {
-    alert("Zendesk script loaded!");
-  };
-
-  useZendesk({
-    zendeskKey: "YOUR_ZENDESK_KEY",
-    scriptId: "zendesk-script",
-    handleOnLoad: handleLoad,
-  });
+  useZendesk();
 
   return <div>Your component content using hook</div>;
 };
+
+export const UseZendeskHookExampleWrapped = () => (
+  <ZendeskProvider zendeskKey="YOUR_ZENDESK_KEY" scriptId="zendesk-script">
+    <UseZendeskHookExample />
+  </ZendeskProvider>
+);
 ```
