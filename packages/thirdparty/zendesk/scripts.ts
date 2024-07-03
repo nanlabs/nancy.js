@@ -39,12 +39,14 @@ export const injectZendeskScript = ({
   ...rest
 }: ZendeskScriptProps) => {
   // Check if script is already injected
-  if (document.getElementById(scriptId)) {
-    handleOnLoad && handleOnLoad();
+  const existingScript = document.getElementById(scriptId);
+  if (existingScript) {
+    handleOnLoad?.();
     return;
   }
 
   const js = generateZendeskScript({
+    src,
     scriptId,
     handleOnLoad,
     ...rest,
@@ -63,7 +65,5 @@ export const injectZendeskScript = ({
  */
 export const removeZendeskScript = (scriptId: string) => {
   const script = document.querySelector(`#${scriptId}`);
-  if (script) {
-    script.remove();
-  }
+  script?.remove();
 };

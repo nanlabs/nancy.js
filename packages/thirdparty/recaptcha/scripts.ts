@@ -64,6 +64,7 @@ export const injectGoogleReCaptchaScript = ({
   }
 
   const js = generateGoogleReCaptchaScript({
+    src,
     scriptId,
     handleOnLoad,
     appendTo,
@@ -84,13 +85,9 @@ export const injectGoogleReCaptchaScript = ({
 export const removeGoogleReCaptchaScript = (scriptId: string) => {
   // remove badge
   const nodeBadge = document.querySelector(".grecaptcha-badge");
-  if (nodeBadge && nodeBadge.parentNode) {
-    document.body.removeChild(nodeBadge.parentNode);
-  }
+  nodeBadge?.parentElement?.remove();
 
   // remove script
   const script = document.querySelector(`#${scriptId}`);
-  if (script) {
-    script.remove();
-  }
+  script?.remove();
 };
