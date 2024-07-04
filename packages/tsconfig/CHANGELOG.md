@@ -1,5 +1,11 @@
 # tsconfig
 
+## 0.2.10
+
+### Patch Changes
+
+- ffe7c5c: Added Zendesk integration
+
 ## 0.2.9
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @nanlabs/playground
 
+## 0.1.1
+
+### Patch Changes
+
+- ffe7c5c: Added Zendesk integration
+
 ## 0.1.0
 
 ### Minor Changes

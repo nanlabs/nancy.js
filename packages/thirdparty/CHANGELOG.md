@@ -1,5 +1,11 @@
 # @nanlabs/thirdparty
 
+## 0.4.0
+
+### Minor Changes
+
+- ffe7c5c: Added Zendesk integration
+
 ## 0.3.9
 
 ### Patch Changes
