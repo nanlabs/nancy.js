@@ -26,9 +26,9 @@ npm install @nanlabs/react-ui
 
 ## Usage
 
-The following example shows how one of the multiple hooks provided by this library can be used.
+The following example shows how one of the components provided by this library can be used.
 
-In the example bellow we use the `Image` component to render an image with a list of fallbacks and retrying on error.
+In the example below we use the `Image` component to render an image with a list of fallbacks and retrying on error.
 
 You can find more examples in the [documentation][docs].
 
