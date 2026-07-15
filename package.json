@@ -20,7 +20,7 @@
     "type-check": "turbo run type-check"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.25.0",
+    "@changesets/cli": "^2.27.10",
     "@nanlabs/eslint-config-ts": "*",
     "husky": "^8.0.2",
     "is-ci": "^3.0.1",
