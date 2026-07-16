@@ -6,12 +6,11 @@ const SMALL_PR_LINES = 200;
 const DOC_FILE_MATCH = "**/*.md";
 const SRC_FILE_REGEXP = /test.*\.([tj]s?)$/;
 const prBody = danger.github.pr.body || "";
-const releasePrTitle = /^(version packages|chore: version packages|chore\(release\):|chore: release\b)/i;
+const releasePrTitle =
+  /^(version packages|chore: version packages|chore\(release\):|chore: release\b)/i;
 
 const hasIssueReference = (text: string) => {
-  const cleaned = text
-    .replace(/```[\s\S]*?```/g, "")
-    .replace(/#ISSUE\b/gi, "");
+  const cleaned = text.replace(/```[\s\S]*?```/g, "").replace(/#ISSUE\b/gi, "");
   const issueReference =
     /\b(?:closes|fixes|resolves|refs|see|related to|part of)\s+(?:#\d+|https:\/\/github\.com\/[\w.-]+\/[\w.-]+\/issues\/\d+)|(?<![#\w])#\d+\b/gim;
   return issueReference.test(cleaned);
@@ -132,8 +131,8 @@ if (!packageJSON.modified && npmLockfile.modified) {
   const title = ":lock: package.json";
   const idea =
     "Changes were made to `package-lock.json`, but not to `package.json`. " +
-    "Please remove `package-lock.json` changes from your pull request. " +
-    "Try to run `git checkout master -- package-lock.json` and commit changes.";
+    "Make sure these changes are intentional (e.g. transitive dependency updates). " +
+    "If they are unintended, run `git checkout main -- package-lock.json` and commit changes.";
   fail(`${title} - <i>${idea}</i>`);
 }
 
