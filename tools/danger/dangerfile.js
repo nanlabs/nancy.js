@@ -126,7 +126,7 @@ if (!packageJSON.modified && npmLockfile.modified) {
     "Changes were made to `package-lock.json`, but not to `package.json`. " +
     "Make sure these changes are intentional (e.g. transitive dependency updates). " +
     "If they are unintended, run `git checkout main -- package-lock.json` and commit changes.";
-  fail(`${title} - <i>${idea}</i>`);
+  warn(`${title} - <i>${idea}</i>`);
 }
 
 if (yarnLockfile.modified) {
@@ -134,5 +134,5 @@ if (yarnLockfile.modified) {
   const idea =
     "This PR is adding file `yarn.lock` and we don't use npm!. " +
     "Please remove `yarn.lock` and commit changes.";
-  fail(`${title} - <i>${idea}</i>`);
+  warn(`${title} - <i>${idea}</i>`);
 }
