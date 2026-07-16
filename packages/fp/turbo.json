@@ -1,4 +1,9 @@
 {
   "extends": ["//"],
-  "globalEnv": ["DEBUG"]
+  "tasks": {
+    "lint": {
+      "env": ["DEBUG"],
+      "passThroughEnv": ["DEBUG"]
+    }
+  }
 }
