@@ -9,7 +9,7 @@ Integrating Zendesk into your React application
 
 ### Provide API Key
 
-To use these integrations, you need to create an API key for your domain. You can get one from [here](https://www.zendesk.com/).
+To use these integrations, you need to create an API key for your domain. You can get one from [Zendesk](https://www.zendesk.com/).
 
 ### Components
 
